@@ -49,7 +49,7 @@ function Navbar() {
                 </li>
                 <li className='nav-item'>
                  <CustomLink to='/enginuity' className='nav-links' onClick={handleClick}>
-                  Enginuity for Universities
+                  Enginuity (for Universities)
                  </CustomLink>
                 </li>
                  <li className='nav-item'>
@@ -58,7 +58,6 @@ function Navbar() {
                   </Link>
                 </li>
              </ul>
-             {button && <Button buttonStyle='btn--outline'>Register <i class="fa fa-user-plus" aria-hidden="true"></i></Button>} 
             </div>
           </nav>
         </>

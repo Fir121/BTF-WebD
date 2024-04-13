@@ -7,9 +7,8 @@ import './Homebuttons.css';
 function Homebuttons() {
   return (
     <div className='home-container'>
-      <h1>Welcome to BITS Tech Fest 2024</h1>
-      
-     
+      <h1>BITS Tech Fest 2024</h1>
+      <p>The UAE's largest Tech Festival</p>
     </div>
   );
 }

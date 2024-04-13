@@ -1,46 +1,178 @@
+
 form {
-  margin: 3rem auto;
-  width: 500px;
-  max-width: 80%;
-  padding: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+   background: #7F00FF;
+   background-size:cover;
+   background-repeat:no-repeat;
+   background-attachment:scroll;
+    height:300vh;
+    width: 100%;
+    display:-webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left:2px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    border-style: double;
+    border-width: 1px;
 }
+
+
 form > div {
-  display: flex;
+  display:flex;
   margin-bottom: 20px;
+  margin-left:1rem;
 }
+form > h1 {
+  display: flex;
+  align-self:center;
+  font-family:'ClashDisplay-Medium';
+  color: #ffff;
+  font-size: 50px;
+}
+
+form > h3 {
+  display: flex;
+  align-self:center;
+  font-family:'ClashDisplay-SemiBold';
+  color: #ffff;
+  margin-left:1rem;
+  font-size: 20px;
+
+}
+
+form > div > p {
+  display: flex;
+  text-align:left;
+  font-family:'ClashDisplay-Regular';
+  color: #ffff;
+  margin-left:10rem;
+  font-size: 20px;
+}
+
 .input-group-school {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
+  font-family: 'ClashDisplay-Bold';
+  align-self:Center;
+  width:30%;
+  color: #ffff;
 }
+
 .input-group-personal {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
+  color:#ffff;
+  font-family:'ClashDisplay-Medium';
+  width: 30%;
+  margin-bottom:1rem;
+  align-self:center;
 }
 .input-group > label {
   font-size: 0.9rem;
+  display:block;
+  font-family:'ClashDisplay-Medium';
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  color: #ffff;
+  margin-bottom: 1rem;
 }
-.input {
-  width: 100%;
-  display: flex;
-}
-.event-input {
+
+.input-group-accom {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
+  color:#ffff;
+  font-family:'ClashDisplay-Medium';
+  width: 30%;
+  margin-bottom:1rem;
+  align-self:center;
 }
-.input > input {
-  padding: 0.3rem 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 100%;
+
+.input-group-accom > label {
+  font-size: 0.9rem;
+  display:block;
+  font-family:'ClashDisplay-Regular';
+  font-weight: 700;
+  color:#ffff;
+  margin-bottom: 1rem;
 }
-.input > input:focus {
-  outline: none;
+
+.events-container > h3{
+  display: flex;
+  align-self:center;
+  font-family:'ClashDisplay-SemiBold';
+  color: #ffff;
+  margin-left:1rem;
+  font-size: 30px;
 }
+
+.events-container {
+    width: 80%;
+    height: 400px;
+    padding: 10px;
+    border: 1px white;
+    border-style:double;
+    position:sticky;
+    margin: 1rem 0;
+    align-self:center;
+}
+.container-1 {
+  margin: 1rem 0;
+  display: block;
+  position: relative;
+  padding-left: 0px;
+  margin-left: 10rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-width:40%;
+  font-family: 'ClashDisplay-Regular';
+  color:#ffff;
+}
+
+.container-2 {
+  margin: 1rem 0;
+  margin-left: 25rem;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-width: 40%;
+  font-family: 'ClashDisplay-Regular';
+  color:#ffff;
+}
+
+.input {
+  width: 50%;
+  max-width:800px;
+  margin-bottom:1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 65%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background:transparent;
+  margin-bottom:1rem;
+}
+
+
 .input > div {
   padding: 0.5rem 1rem;
   background: #e34728;
@@ -63,29 +195,31 @@ form > div {
   justify-content: center;
 }
 .submit-btn {
-  width: 100%;
+  width: 40%;
+  align-self: center;
   padding: 0.5rem 1rem;
-  border: 1px solid #e34728;
-  background: #fff;
-  margin: 1.2rem 0;
-  color: #e34728;
+  margin-bottom: 3rem;
+  background: #000000;
   font-size: 0.9rem;
   font-weight: 700;
+  color:#ffff;
   cursor: pointer;
 }
 .submit-btn:hover {
-  background-color: #45a049;
+  background-color: #7F00FF;
 }
 .dialog-box {
   margin: 0.5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
   grid-gap: 1rem;
+  font-family:'ClashDisplay-Regular';
+  color:#ffff;
 }
 .dialog-box > input,
 .dialog-box > select {
   padding: 0.5rem 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(92, 5, 102, 0.502);
 }
 .dialog-box > input:focus,
 .dialog-box > select:focus {
@@ -121,7 +255,7 @@ form > div {
 }
 .close:hover,
 .close:focus {
-  color: black;
+  color: #7F00FF;
   text-decoration: none;
   cursor: pointer;
 }
@@ -136,4 +270,80 @@ th, td {
 }
 tr:hover {
   background-color: #f5f5f5;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+       url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Extralight';
+  src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
+       url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Light';
+  src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Light.woff') format('woff'),
+       url('../fonts/ClashDisplay-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+       url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+       url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Semibold';
+  src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+       url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+       url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
 }
