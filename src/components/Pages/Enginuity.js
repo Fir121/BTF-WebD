@@ -117,6 +117,7 @@ const Enginuity = () => {
 
   return (
     <div>
+      <img src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" />
       <form id="form" className="container m-4 pl-4" onSubmit={handleSubmit}>
         <div className="field">
           <label className="label">Name</label>
@@ -259,59 +260,59 @@ const Enginuity = () => {
           </div>
         </div>
         <div className="field">
-          <label className="label">Interests</label>
+          <label className="label">Events</label>
           <div className="control">
             <label className="checkbox">
               <input
                 type="checkbox"
-                name="Interests"
-                value="Sports"
+                name="Event 1"
+                value="False"
                 onChange={(event) => {
                   if (event.target.checked) {
                     openModal('team');
                   }
                 }}
               />
-              Sports
+              Event 1
             </label>
             <label className="checkbox">
               <input
                 type="checkbox"
-                name="Interests"
-                value="Music"
+                name="Event 2"
+                value="False"
                 onChange={(event) => {
                   if (event.target.checked) {
                     openModal('team');
                   }
                 }}
               />
-              Music
+              Event 2
             </label>
             <label className="checkbox">
               <input
                 type="checkbox"
-                name="Interests"
-                value="Reading"
+                name="Event 3"
+                value="False"
                 onChange={(event) => {
                   if (event.target.checked) {
                     openModal('team');
                   }
                 }}
               />
-              Reading
+              Event 3
             </label>
             <label className="checkbox">
               <input 
                 type="checkbox"
-                name="Interests"
-                value="Travel"
+                name="Event 4"
+                value="False"
                 onChange={(event) => {
                   if (event.target.checked) {
                     openModal('team');
                   }
                 }}
               />
-              Travel
+              Event 4
             </label>
           </div>
         </div>
