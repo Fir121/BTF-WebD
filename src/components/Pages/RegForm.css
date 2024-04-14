@@ -49,6 +49,122 @@ form > div > p {
   font-size: 20px;
 }
 
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #363636;
+}
+
+.control {
+  position: relative;
+}
+
+.input,
+.select select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #363636;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input:focus,
+.select select:focus {
+  outline: none;
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.select select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23363636' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 8px 10px;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #363636;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #3273dc;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.button:hover {
+  background-color: #276cda;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.button:active {
+  background-color: #2366d1;
+}
+
+.message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #363636;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.message.is-success {
+  background-color: #effaf3;
+  color: #257942;
+}
+
+.message.is-danger {
+  background-color: #feecf0;
+  color: #cc0f35;
+}
 .input-group-school {
   display: flex;
   flex-direction: column;
