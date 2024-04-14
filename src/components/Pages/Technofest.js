@@ -68,9 +68,25 @@ function Technofest() {
     closeModal();
   };
 
-  const submitForm = (formData) => {
-    // Send the form data to the server for processing
-    console.log(formData);
+  const submitForm = async (formData) => {
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbz_FzYhH1h0WZIhvpLicgxWQxqpFnkUGAvLN-oTUdMkImJe_hWqDlaQT8GdPn5MPsVmVA/exec', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        console.log('Form data submitted successfully');
+        // Reset form data or perform any other necessary actions
+      } else {
+        console.error('Error submitting form data');
+      }
+    } catch (error) {
+      console.error('Error submitting form data:', error);
+    }
   };
 
   return (
