@@ -68,16 +68,16 @@ const Enginuity = () => {
 
   const openModal = (modal) => {
     switch (modal) {
-      case "individual":
+      case 'individual':
         setShowIndividualModal(true);
         break;
-      case "team":
+      case 'team':
         setShowTeamModal(true);
         break;
-      case "createTeam":
+      case 'createTeam':
         setShowCreateTeamModal(true);
         break;
-      case "joinTeam":
+      case 'joinTeam':
         setShowJoinTeamModal(true);
         break;
       default:
@@ -99,18 +99,18 @@ const Enginuity = () => {
 
   const generateTeamCode = () => {
     const teamCode = Math.floor(1000 + Math.random() * 9000);
-    document.getElementById("team-code").textContent = `Team Code: ${teamCode}`;
+    document.getElementById('team-code').textContent = `Team Code: ${teamCode}`;
   };
 
   const confirmCreateTeam = () => {
-    const teamName = document.getElementById("team-name").value;
-    const teamCode = document.getElementById("team-code").textContent;
+    const teamName = document.getElementById('team-name').value;
+    const teamCode = document.getElementById('team-code').textContent;
     // Perform create team logic with teamName and teamCode
     closeModal();
   };
 
   const confirmJoinTeam = () => {
-    const joinCode = document.getElementById("join-code").value;
+    const joinCode = document.getElementById('join-code').value;
     // Perform join team logic with joinCode
     closeModal();
   };
@@ -268,7 +268,7 @@ const Enginuity = () => {
                 value="Sports"
                 onChange={(event) => {
                   if (event.target.checked) {
-                    openModal("team");
+                    openModal('team');
                   }
                 }}
               />
@@ -281,7 +281,7 @@ const Enginuity = () => {
                 value="Music"
                 onChange={(event) => {
                   if (event.target.checked) {
-                    openModal("team");
+                    openModal('team');
                   }
                 }}
               />
@@ -294,7 +294,7 @@ const Enginuity = () => {
                 value="Reading"
                 onChange={(event) => {
                   if (event.target.checked) {
-                    openModal("team");
+                    openModal('team');
                   }
                 }}
               />
@@ -329,61 +329,74 @@ const Enginuity = () => {
       </form>
 
       {showIndividualModal && (
-        <div className="modal">
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>Individual Registration</h2>
-            <p>You have chosen to register as an individual for this event.</p>
-            <button onClick={confirmIndividual}>Confirm</button>
+            <div className="box">
+              <h2>Individual Registration</h2>
+              <p>You have chosen to register as an individual for this event.</p>
+              <button className="button is-primary" onClick={confirmIndividual}>Confirm</button>
+            </div>
           </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
         </div>
       )}
 
       {showTeamModal && (
-        <div className="modal">
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>Team Registration</h2>
-            <p>Would you like to create a new team or join an existing team?</p>
-            <button onClick={() => openModal("createTeam")}>Create Team</button>
-            <button onClick={() => openModal("joinTeam")}>Join Team</button>
+            <div className="box">
+              <h2>Team Registration</h2>
+              <p>Would you like to create a new team or join an existing team?</p>
+              <button className="button is-primary" onClick={() => openModal('createTeam')}>Create Team</button>
+              <button className="button is-primary" onClick={() => openModal('joinTeam')}>Join Team</button>
+            </div>
           </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
         </div>
       )}
 
       {showCreateTeamModal && (
-        <div className="modal">
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>Create Team</h2>
-            <label htmlFor="team-name">Team Name:</label>
-            <input type="text" id="team-name" name="team-name" required />
-            <button onClick={generateTeamCode}>Generate Code</button>
-            <p id="team-code"></p>
-            <button onClick={confirmCreateTeam}>Confirm</button>
+            <div className="box">
+              <h2>Create Team</h2>
+              <div className="field">
+                <label className="label" htmlFor="team-name">Team Name:</label>
+                <div className="control">
+                  <input className="input" type="text" id="team-name" name="team-name" required />
+                </div>
+              </div>
+              <button className="button is-primary" onClick={generateTeamCode}>Generate Code</button>
+              <p id="team-code"></p>
+              <button className="button is-primary" onClick={confirmCreateTeam}>Confirm</button>
+            </div>
           </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
         </div>
       )}
 
       {showJoinTeamModal && (
-        <div className="modal">
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>Join Team</h2>
-            <label htmlFor="join-code">Enter Team Code:</label>
-            <input type="text" id="join-code" name="join-code" required />
-            <button onClick={confirmJoinTeam}>Join Team</button>
+            <div className="box">
+              <h2>Join Team</h2>
+              <div className="field">
+                <label className="label" htmlFor="join-code">Enter Team Code:</label>
+                <div className="control">
+                  <input className="input" type="text" id="join-code" name="join-code" required />
+                </div>
+              </div>
+              <button className="button is-primary" onClick={confirmJoinTeam}>Join Team</button>
+            </div>
           </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
         </div>
       )}
+
 
       <div id="message" style={{ display: "none" }}></div>
     </div>
