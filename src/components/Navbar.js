@@ -4,6 +4,9 @@ import './Navbar.css';
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Technofest from './Pages/Technofest';
 import Enginuity from './Pages/Enginuity';
+import AboutUs from './Pages/AboutUs';
+import logo from './logo2-removebg.png';
+import logo3 from './logo3-removebg-preview.png';
 
 
 
@@ -30,14 +33,18 @@ function Navbar() {
         <>
           <nav className="navbar">
             <div className="navbar-container">
-              <Link to="/" className="navbar-logo">
-                 BITS Tech Fest 2024  
-              </Link>
+              <div className=''>
+               <Link to="/" className="navbar-logo">
+                 
+                  <img src={logo} alt='BTF logo' width="40" height="40" className="d-inline-block align-top"/> 
+                 
+               </Link>
+              </div>
               <div className='menu-icon' onClick={handleClick}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
               </div>
               <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                <li className='nav-item'>
+              <li className='nav-item'>
                  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                   Home
                  </Link>
@@ -53,12 +60,19 @@ function Navbar() {
                  </CustomLink>
                 </li>
                  <li className='nav-item'>
-                  <Link to='/events' className='nav-links' onClick={closeMobileMenu}>
-                   Events
+                  <Link to='/about-us' className='nav-links' onClick={handleClick}>
+                   About Us
                   </Link>
                 </li>
              </ul>
             </div>
+            <div className='BITS-logo'>
+               <Link to="/" className="end-logo">
+                 
+                  <img src={logo3} alt='BTF logo' width="40" height="40" className="d-inline-block align-top"/> 
+                 
+               </Link>
+              </div>
           </nav>
         </>
     )

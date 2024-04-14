@@ -1,0 +1,32 @@
+.about-us-container {
+    background: url('../../../public/images/logo2.jpg') center center/cover no-repeat;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    height:150vh;
+    width: 100%;
+    display:-webkit-flex;
+    grid-auto-rows: 150vh;
+    grid-template-columns: 33% 34% 33%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit:cover;
+  }
+
+  .about-us-container > h1 {
+    color: #ffff;
+    font-size: 100px;
+    font-family:'ClashDisplay-Bold';
+    text-align: center;
+  }
+  
+  .about-us-container > p {
+    margin-top: 8px;
+    color: #ffff;
+    font-size: 75px;
+    justify-content:center;
+    font-family: 'ClashDisplay-Medium';
+  }
+  

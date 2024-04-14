@@ -3,7 +3,7 @@
     height: 80px;
     display: flex;
     justify-content:space-around;
-    align-items: center;
+    align-items:center;
     font-size: 1.2rem;
     font-family:'ClashDisplay-SemiBold';
     position: sticky;
@@ -12,15 +12,19 @@
   }
 
   .navbar-logo {
-    color: #fff;
-    justify-self:left;
+    justify-self:right;
     margin-left: 20px;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
     display: flex;
-    align-items: center;
-  }
+    align-items:center;
+  } 
+
+  .end-logo {
+    justify-self:right;
+    align-items:center;
+    cursor: pointer;
+    display: flex;
+  } 
 
   .fa-typo3 {
     margin-left: 0.5rem;
