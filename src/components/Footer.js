@@ -10,14 +10,6 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='social-icons'>
             <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
               class='social-icon-link instagram'
               to='/'
               target='_blank'
@@ -56,6 +48,9 @@ function Footer() {
             <Link to='/' className='nav-links'>
                  bitstechfest@dubai.bits-pilani.ac.in
             </Link>
+            <div className='text'>
+              <p>See you at BITS Tech Fest 2024!</p>
+            </div>
           </div>
         </div>
       </section>

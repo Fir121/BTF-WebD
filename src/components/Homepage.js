@@ -5,7 +5,7 @@ import './Homepage.css';
 import Empower from '../components/img-6.jpg';
 import Engage from '../components/img-7.jpg';
 import Excel from '../components/img-8.jpg';
-import Logo from '../components/logo2 copy.jpg';
+import Cards from '../components/Cards';
 
 
 function Homepage() {
@@ -22,6 +22,11 @@ function Homepage() {
        <h1> <br/>E<br/>X<br/>C<br/>E<br/>L<br/> <br/> </h1>
       </div>
      </div>
+     <div className='BTF-container'>
+      <h1> Welcome to BITS Tech Fest 2024! </h1>
+      <p> The UAE's largest Tech Festival </p>
+     </div>
+     <Cards />
     </>
   );
 }

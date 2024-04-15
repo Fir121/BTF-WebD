@@ -31,6 +31,38 @@
   font-family: 'ClashDisplay-Medium';
 }
 
+.BTF-container > h1 {
+  color: #ffff;
+  font-size: 100px;
+  font-family:'ClashDisplay-Bold';
+  margin-top: -100px;
+  text-align: center;
+}
+
+.BTF-container > p {
+  margin-top: 8px;
+  color: #ffff;
+  font-size: 75px;
+  font-family: 'ClashDisplay-Medium';
+}
+
+
+.BTF-container {
+  background-size:cover;
+  background-image: url('./logo2.jpg');
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  height:150vh;
+  width: 100%;
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit:cover;
+}
+
 .left {
   height: 100%;
   flex: 33%;

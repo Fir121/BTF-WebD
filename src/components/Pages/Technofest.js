@@ -65,7 +65,7 @@ const Technofest = () => {
     <div>
       
       <form id="form" className="container m-4 pl-4" onSubmit={handleSubmit}>
-        <h1> Technofest for Schools- Registration Form</h1>
+        <h3> Technofest for Schools- Registration Form</h3>
         <div className="field">
           <label className="label">Name</label>
           <div className="control">

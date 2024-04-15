@@ -15,8 +15,24 @@
     text-decoration: none;
     font-family:'ClashDisplay-Regular';
     padding: 0.5rem 1rem;
+    margin-left: 1rem 0;
+    margin-right: 2rem;
   }
 
+  .text {
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    font-family:'ClashDisplay-Regular';
+    margin-left: 35rem;
+    justify-self: center;
+  }
+
+  .text > p {
+    font-size: 10px;
+    width: 100px;
+  }
   
   .footer-link-items a {
     color: #fff;
@@ -48,6 +64,8 @@
     width: 90%;
     max-width: 1000px;
     margin: 40px auto 0 auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   
   .social-icons {

@@ -119,7 +119,7 @@ const Enginuity = () => {
     <div>
       {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
       <form id="form" className="container  m-4 pl-4" onSubmit={handleSubmit}>
-        <h1>Enginuity (for Universities) Registration Form</h1>
+        <h3>Enginuity (for Universities) Registration Form</h3>
         <div className="field">
           <label className="label">Name</label>
           <div className="control">
