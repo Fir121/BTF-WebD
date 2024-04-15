@@ -1,36 +1,37 @@
 
-form {
-   background: #7F00FF;
+.form {
+   background:rgba(92, 5, 102, 0.502);
    background-size:cover;
    background-repeat:no-repeat;
    background-attachment:scroll;
-    height:300vh;
-    width: 100%;
-    display:-webkit-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    margin-left:2px;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    border-style: double;
-    border-width: 1px;
+   height:300vh;
+   width: 100%;
+   display:-webkit-flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: left;
+   margin-left:2px;
+   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+   border-style: double;
+   border-width: 1px;
 }
 
 
-form > div {
+.form > div {
   display:flex;
   margin-bottom: 20px;
   margin-left:1rem;
 }
-form > h1 {
+
+.form > h1 {
   display: flex;
-  align-self:center;
-  font-family:'ClashDisplay-Medium';
-  color: #ffff;
-  font-size: 50px;
+  align-self:center !important;
+  font-family:'ClashDisplay-Bold' !important;
+  color:#000000;
+  font-size: 90px !important;
 }
 
-form > h3 {
+.form > h3 {
   display: flex;
   align-self:center;
   font-family:'ClashDisplay-SemiBold';
@@ -40,7 +41,7 @@ form > h3 {
 
 }
 
-form > div > p {
+.form > div > p {
   display: flex;
   text-align:left;
   font-family:'ClashDisplay-Regular';
@@ -51,12 +52,15 @@ form > div > p {
 
 .container {
   max-width: 600px;
+  background-color: #7F00FF;
   margin: 0 auto;
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 6px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
+
+/*.container m-4 pl-4*/
 
 .field {
   margin-bottom: 1.5rem;
