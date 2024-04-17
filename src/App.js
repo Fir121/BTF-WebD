@@ -17,12 +17,11 @@ function App() {
     <>
       <Router>
         <Navbar />
-        {/*<HashLink smooth to="/reg#form"/>*/}
         <Routes>
         <Route path='/' exact element={ <Homepage />}></Route>
-        <Route path='/technofest' exact element={ <Technofest />}></Route>
-        <Route path="/enginuity" element={<Enginuity />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path='#reg-form' exact element={ <Technofest />}></Route>
+        <Route path="#about-us" element={<AboutUs />} />
+        <Route path="#events" element={<Cards />} />
         </Routes> 
         <Footer />
       </Router>

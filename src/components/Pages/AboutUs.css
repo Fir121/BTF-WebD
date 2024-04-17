@@ -34,3 +34,27 @@
   justify-content: center;
 }
 
+.themes-container > h2 {
+  color:#ffff;
+  margin: 1rem 0;
+  font-size: 30px;
+  font-family:"ClashDisplay-Bold";
+  text-align: center;
+  justify-content: center;
+
+}
+
+.themes-container {
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  box-sizing: border-box; 
+  margin:0;
+  padding: 0;
+  display:block;
+  height: 40vh;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+}
+

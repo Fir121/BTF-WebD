@@ -8,7 +8,6 @@ import Excel from '../components/img-8.jpg';
 import Cards from '../components/Cards';
 import AboutUs from '../components/Pages/AboutUs';
 import Technofest from '../components/Pages/Technofest';
-import { HashLink } from 'react-router-hash-link';
 
 
 function Homepage() {
@@ -18,9 +17,9 @@ function Homepage() {
       <div className='BTF-container'>
        <h1> Welcome to BITS Tech Fest 2024! </h1>
        <p> The UAE's largest Tech Festival </p>
-       <a href='#reg-form'>
-         <Button>Register Now!</Button>
-       </a>
+       <Button>
+        <a href='#reg-form'>Register Now! </a>
+       </Button>
       </div>
       <div className='home-container'>
        <div className='left' style={{ backgroundImage: `url(${Empower})` }}>
@@ -39,7 +38,7 @@ function Homepage() {
       <div id='events'>
        <Cards />
       </div>
-      <div id='reg-form'>
+      <div title='reg-form'>
        <Technofest />
       </div>
      </div>

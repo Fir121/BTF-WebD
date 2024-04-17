@@ -64,7 +64,7 @@ const Technofest = () => {
   return (
     <div>
       
-      <form id="form" className="container m-4 pl-4" onSubmit={handleSubmit}>
+      <form id="reg-form" className="container m-4 pl-4" onSubmit={handleSubmit}>
         <h3>Registration Form</h3>
         <div className="field">
           <label className="label">Name</label>
