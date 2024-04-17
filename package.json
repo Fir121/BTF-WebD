@@ -1,9 +1,9 @@
 {
-  "name": "btf-reg-site",
+  "name": "BTF-WebD",
   "version": "0.1.0",
   "private": true,
   "description": "Registrations website for BITS Tech Fest",
-  "homepage": "https://howdoiusekeyboard.github.io/btf-reg-site",
+  "homepage": "https://howdoiusekeyboard.github.io/BTF-WebD",
   "authors": [
     "Kushagra Golash <f20220226@dubai.bits-pilani.ac.in>",
     "R Prasannah <f20220225@dubai.bits-pilani.ac.in>"
