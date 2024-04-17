@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <nav className='navbar-container'>
-                <a href='#' className='navbar-logo'>
+                <a href='#home' className='navbar-logo'>
                     <img src={logo} alt='logo' width="40" height="40" className="d-inline-block align-top"/>
                 </a>
                 <div className='menu-icon' onClick={handleClick}>
@@ -25,7 +25,7 @@ const Navbar = () => {
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className='nav-links' style={{ color:"#FFFF;" }}>
-                        <a href='#' onClick={closeMenu}>Home</a>
+                        <a href='#home' onClick={closeMenu}>Home</a>
                     </li>
                     <li className='nav-links'>
                         <a href='#reg-form' onClick={closeMenu}>Register</a>
@@ -37,7 +37,7 @@ const Navbar = () => {
                         <a href='#events' onClick={closeMenu}>Events</a>
                     </li>
                 </ul>
-                <a href='#' className='end-logo'>
+                <a href='#home' className='end-logo'>
                     <img src={logo3} alt='logo' width="40" height="40" className="d-inline-block align-top"/>
                 </a>
             </nav>
