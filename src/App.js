@@ -4,16 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Navbar from './components/Navbar';
 import Technofest from './components/Pages/Technofest';
-import Enginuity from './components/Pages/Enginuity';
 import Footer from './components/Footer.js';
 import AboutUs from './components/Pages/AboutUs';
-import { HashLink } from 'react-router-hash-link';
 import Cards from './components/Cards.js';
 
 
-
 function App() {
-  return (
+   return (
     <>
       <Router>
         <Navbar />
@@ -27,6 +24,7 @@ function App() {
       </Router>
     </>
   );
-}
+ }
 
 export default App;
+

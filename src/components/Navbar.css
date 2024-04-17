@@ -11,6 +11,12 @@
   z-index: 999;
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+
 .navbar-logo {
   justify-self:right;
   margin-left: 20px;
@@ -87,13 +93,17 @@
 
 
 .nav-links {
-  color: black;
+  color: #ffff;
   display: flex;
   align-items: center;
   text-decoration: none;
   font-family:'ClashDisplay-Regular';
   padding: 0.5rem 1rem;
   height: 100%;
+}
+
+.nav-links > a {
+  color: #ffff;
 }
 
 .nav-links:hover {

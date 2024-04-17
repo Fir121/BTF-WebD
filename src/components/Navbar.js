@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from './logo2-removebg.png'
-import logo3 from './logo3.png'
+import logo3 from './BPDC Logo png.png'
 
 import './Navbar.css'
 
@@ -24,7 +24,7 @@ const Navbar = () => {
 
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-links'>
+                    <li className='nav-links' style={{ color:"#FFFF;" }}>
                         <a href='/' onClick={closeMenu}>Home</a>
                     </li>
                     <li className='nav-links'>
