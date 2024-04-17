@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import "./RegForm.css";
 
 const API_LINK =
-  "https://script.google.com/macros/s/AKfycbz_FzYhH1h0WZIhvpLicgxWQxqpFnkUGAvLN-oTUdMkImJe_hWqDlaQT8GdPn5MPsVmVA/exec";
+  "https://script.google.com/macros/s/AKfycbx0W50mPE7jEUkQu2jQcJGZG_QLcR1vwdqllRoMu-H2dM-NNrBqWdB13_owEjxGyaJ6zA/exec";
 
-const Enginuity = () => {
-  const [showIndividualModal, setShowIndividualModal] = useState(false);
+const BTFRegistration = () => {
+  /*const [showIndividualModal, setShowIndividualModal] = useState(false);
   const [showTeamModal, setShowTeamModal] = useState(false);
   const [showCreateTeamModal, setShowCreateTeamModal] = useState(false);
   const [showJoinTeamModal, setShowJoinTeamModal] = useState(false);
-
+  */
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
     document.getElementById("message").textContent = "Submitting..";
@@ -56,16 +57,20 @@ const Enginuity = () => {
           document.getElementById("message").textContent = "";
           document.getElementById("message").style.display = "none";
         }, 2600);
+
+        //setFormSubmitted(true);
+        //url = "https://btf.pythonanywhere.com/send-registration-confirmation?n=" + data["Name"].replace(" ", "+") + "&i=" + data["Institution"].replace(" ", "+") + "&e=" + data["Email"].replace(" ", "");
+        //console.log(data);
       })
       .catch(function (error) {
         // Handle errors, you can display an error message here
         console.error(error);
         document.getElementById("message").textContent =
-          "An error occurred while submitting the form." + ": " + error;
+          "An error occurred while submitting the form: " + error;
         document.getElementById("message").style.display = "block";
       });
   };
-
+  /*
   const openModal = (modal) => {
     switch (modal) {
       case 'individual':
@@ -114,7 +119,7 @@ const Enginuity = () => {
     // Perform join team logic with joinCode
     closeModal();
   };
-
+  */
   return (
     <div>
       {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
@@ -132,10 +137,10 @@ const Enginuity = () => {
           </div>
         </div>
         <div className="field">
-          <label className="label">University</label>
+          <label className="label">Institution</label>
           <div className="control">
             <div className="select">
-              <select name="University">
+              <select name="Institution">
                 <option value="">Select an option</option>
                 <option value="BITS">BITS</option>
                 <option value="Manipal">Manipal</option>
@@ -268,11 +273,11 @@ const Enginuity = () => {
                 type="checkbox"
                 name="Event 1"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
-                    openModal('team');
+                    openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 1
             </label>
@@ -281,11 +286,11 @@ const Enginuity = () => {
                 type="checkbox"
                 name="Event 2"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
-                    openModal('team');
+                    openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 2
             </label>
@@ -294,24 +299,24 @@ const Enginuity = () => {
                 type="checkbox"
                 name="Event 3"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
-                    openModal('team');
+                    openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 3
             </label>
             <label className="checkbox">
-              <input 
+              <input
                 type="checkbox"
                 name="Event 4"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
-                    openModal('team');
+                    openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 4
             </label>
@@ -329,80 +334,9 @@ const Enginuity = () => {
           </div>
         </div>
       </form>
-
-      {showIndividualModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Individual Registration</h2>
-              <p>You have chosen to register as an individual for this event.</p>
-              <button className="button is-primary" onClick={confirmIndividual}>Confirm</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-
-      {showTeamModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Team Registration</h2>
-              <p>Would you like to create a new team or join an existing team?</p>
-              <button className="button is-primary" onClick={() => openModal('createTeam')}>Create Team</button>
-              <button className="button is-primary" onClick={() => openModal('joinTeam')}>Join Team</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-
-      {showCreateTeamModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Create Team</h2>
-              <div className="field">
-                <label className="label" htmlFor="team-name">Team Name:</label>
-                <div className="control">
-                  <input className="input" type="text" id="team-name" name="team-name" required />
-                </div>
-              </div>
-              <button className="button is-primary" onClick={generateTeamCode}>Generate Code</button>
-              <p id="team-code"></p>
-              <button className="button is-primary" onClick={confirmCreateTeam}>Confirm</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-
-      {showJoinTeamModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Join Team</h2>
-              <div className="field">
-                <label className="label" htmlFor="join-code">Enter Team Code:</label>
-                <div className="control">
-                  <input className="input" type="text" id="join-code" name="join-code" required />
-                </div>
-              </div>
-              <button className="button is-primary" onClick={confirmJoinTeam}>Join Team</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-
-
       <div id="message" style={{ display: "none" }}></div>
     </div>
   );
 };
 
-export default Enginuity;
+export default BTFRegistration;
