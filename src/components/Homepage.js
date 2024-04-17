@@ -7,7 +7,7 @@ import Engage from '../components/img-7.jpg';
 import Excel from '../components/img-8.jpg';
 import Cards from '../components/Cards';
 import AboutUs from '../components/Pages/AboutUs';
-import Technofest from '../components/Pages/Technofest';
+import BTFRegistration from '../components/Pages/BTFRegistration';
 
 
 function Homepage() {
@@ -39,7 +39,7 @@ function Homepage() {
        <Cards />
       </div>
       <div title='reg-form'>
-       <Technofest />
+       <BTFRegistration />
       </div>
      </div>
     </>
