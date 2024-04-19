@@ -38,14 +38,15 @@ function Homepage() {
         <h1> <br/>E<br/>X<br/>C<br/>E<br/>L<br/> <br/> </h1>
        </div>
       </div>
-      <div id='about-us'>
-       <AboutUs/>
-      </div>
+      
       <div id='events'>
        <Cards />
       </div>
       <div title='reg-form'>
        <BTFRegistration />
+      </div>
+      <div id='about-us'>
+       <AboutUs/>
       </div>
      </div>
     </>

@@ -48,7 +48,7 @@ function Footer() {
                  bitstechfest@dubai.bits-pilani.ac.in
             </Link>
             <div className='text'>
-              <p>See you at BITS Tech Fest 2024!</p>
+              <p>Site created and maintained by Prasannah and Kushagra</p>
             </div>
           </div>
         </div>

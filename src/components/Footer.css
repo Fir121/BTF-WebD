@@ -19,20 +19,18 @@
     margin-right: 2rem;
   }
 
-  .text {
+  .text > p {
     color: #fff;
     display: flex;
     align-items: flex-end;
     text-decoration: none;
     font-family:'ClashDisplay-Regular';
     margin-left: 35rem;
-    justify-self: center;
+    font-size: 15px;
+    justify-self:end;
+    width: 200px;
   }
 
-  .text > p {
-    font-size: 10px;
-    width: 100px;
-  }
   
   .footer-link-items a {
     color: #fff;
