@@ -10,6 +10,8 @@ const BTFRegistration = () => {
   const [showCreateTeamModal, setShowCreateTeamModal] = useState(false);
   const [showJoinTeamModal, setShowJoinTeamModal] = useState(false);
   
+
+  
  
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -108,14 +110,14 @@ const BTFRegistration = () => {
   };
 
   const confirmCreateTeam = () => {
-    const teamName = document.getElementById('team-name').value;
-    const teamCode = document.getElementById('team-code').textContent;
+    //const teamName = document.getElementById('team-name').value;
+    //const teamCode = document.getElementById('team-code').textContent;
     // Perform create team logic with teamName and teamCode
     closeModal();
   };
 
   const confirmJoinTeam = () => {
-    const joinCode = document.getElementById('join-code').value;
+    //const joinCode = document.getElementById('join-code').value;
     // Perform join team logic with joinCode
     closeModal();
   };
@@ -334,6 +336,74 @@ const BTFRegistration = () => {
           </div>
         </div>
       </form>
+      {showIndividualModal && (
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
+          <div className="modal-content">
+            <div className="box">
+              <h2>Individual Registration</h2>
+              <p>You have chosen to register as an individual for this event.</p>
+              <button className="button is-primary" onClick={confirmIndividual}>Confirm</button>
+            </div>
+          </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
+        </div>
+      )}
+
+      {showTeamModal && (
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
+          <div className="modal-content">
+            <div className="box">
+              <h2>Team Registration</h2>
+              <p>Would you like to create a new team or join an existing team?</p>
+              <button className="button is-primary" onClick={() => openModal('createTeam')}>Create Team</button>
+              <button className="button is-primary" onClick={() => openModal('joinTeam')}>Join Team</button>
+            </div>
+          </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
+        </div>
+      )}
+
+      {showCreateTeamModal && (
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
+          <div className="modal-content">
+            <div className="box">
+              <h2>Create Team</h2>
+              <div className="field">
+                <label className="label" htmlFor="team-name">Team Name:</label>
+                <div className="control">
+                  <input className="input" type="text" id="team-name" name="team-name" required />
+                </div>
+              </div>
+              <button className="button is-primary" onClick={generateTeamCode}>Generate Code</button>
+              <p id="team-code"></p>
+              <button className="button is-primary" onClick={confirmCreateTeam}>Confirm</button>
+            </div>
+          </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
+        </div>
+      )}
+
+      {showJoinTeamModal && (
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
+          <div className="modal-content">
+            <div className="box">
+              <h2>Join Team</h2>
+              <div className="field">
+                <label className="label" htmlFor="join-code">Enter Team Code:</label>
+                <div className="control">
+                  <input className="input" type="text" id="join-code" name="join-code" required />
+                </div>
+              </div>
+              <button className="button is-primary" onClick={confirmJoinTeam}>Join Team</button>
+            </div>
+          </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
+        </div>
+      )}
       <div id="message" style={{ display: "none" }}></div>
     </div>
   );

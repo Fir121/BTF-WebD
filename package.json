@@ -1,27 +1,28 @@
 {
-  "name": "btf-reg-site",
+  "name": "BTF-WebD",
   "version": "0.1.0",
   "private": true,
   "description": "Registrations website for BITS Tech Fest",
+  "homepage": "https://howdoiusekeyboard.github.io/BTF-WebD",
   "authors": [
     "Kushagra Golash <f20220226@dubai.bits-pilani.ac.in>",
     "R Prasannah <f20220225@dubai.bits-pilani.ac.in>"
   ],
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.1.0",
     "react-router-dom": "^6.22.3",
-    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0"
   },
-  "scripts": {
+"scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+    "build": "react-scripts build"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -39,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
