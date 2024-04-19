@@ -17,9 +17,15 @@ function Homepage() {
       <div className='BTF-container'>
        <h1> Welcome to BITS Tech Fest 2024! </h1>
        <p> The UAE's largest Tech Festival </p>
-       <Button>
-        <a href='#reg-form'>Register Now! </a>
-       </Button>
+       <button 
+              className="button is-primary"
+              type="submit"
+              id="submit-button"
+            ><a href='#reg-form'>
+              Sign Up
+            
+         </a>
+       </button>
       </div>
       <div className='home-container'>
        <div className='left' style={{ backgroundImage: `url(${Empower})` }}>
