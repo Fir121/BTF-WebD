@@ -5,11 +5,11 @@ const API_LINK =
   "https://script.google.com/macros/s/AKfycbx0W50mPE7jEUkQu2jQcJGZG_QLcR1vwdqllRoMu-H2dM-NNrBqWdB13_owEjxGyaJ6zA/exec";
 
 const BTFRegistration = () => {
-  /*const [showIndividualModal, setShowIndividualModal] = useState(false);
+  const [showIndividualModal, setShowIndividualModal] = useState(false);
   const [showTeamModal, setShowTeamModal] = useState(false);
   const [showCreateTeamModal, setShowCreateTeamModal] = useState(false);
   const [showJoinTeamModal, setShowJoinTeamModal] = useState(false);
-  */
+  
  
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -70,7 +70,7 @@ const BTFRegistration = () => {
         document.getElementById("message").style.display = "block";
       });
   };
-  /*
+  
   const openModal = (modal) => {
     switch (modal) {
       case 'individual':
@@ -119,11 +119,11 @@ const BTFRegistration = () => {
     // Perform join team logic with joinCode
     closeModal();
   };
-  */
+  
   return (
     <div>
       {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
-      <form id="form" className="container  m-4 pl-4" onSubmit={handleSubmit}>
+      <form id="reg-form" className="container  m-4 pl-4" onSubmit={handleSubmit}>
         <h3>Enginuity (for Universities) Registration Form</h3>
         <div className="field">
           <label className="label">Name</label>
@@ -273,11 +273,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 1"
                 value="False"
-                /*onChange={(event) => {
+                onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}*/
+                }}
               />
               Event 1
             </label>
@@ -286,11 +286,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 2"
                 value="False"
-                /*onChange={(event) => {
+                onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}*/
+                }}
               />
               Event 2
             </label>
@@ -299,11 +299,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 3"
                 value="False"
-                /*onChange={(event) => {
+                onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}*/
+                }}
               />
               Event 3
             </label>
@@ -312,11 +312,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 4"
                 value="False"
-                /*onChange={(event) => {
+                onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}*/
+                }}
               />
               Event 4
             </label>
