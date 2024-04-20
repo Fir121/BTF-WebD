@@ -26,6 +26,7 @@ function Homepage() {
          </a>
        </button>
       </div>
+      
       <div className='home-container'>
        <div className='left' style={{ backgroundImage: `url(${Empower})` }}>
         <h1> <br/>E<br/>M<br/>P<br/>O<br/>W<br/>E<br/>R </h1>

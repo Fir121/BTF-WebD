@@ -147,6 +147,9 @@ const BTFRegistration = () => {
   return (
     <div>
       <h2>Register Now!</h2>
+      <p> Technofest is our exclusive tech festival for the next generation of engineers. If you are an aspiring engineer, come on over and show off your skills at Technofest 2024.</p> <br/>
+      <p> Enginuity is an exclusive tech festival for college students. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. </p> <br/>
+      <p> Register now! </p> <br/>
       <div className="tab">
         <button
           className="tablinks"
@@ -174,7 +177,7 @@ const BTFRegistration = () => {
           className="container  m-4 pl-4"
           onSubmit={handleSubmit}
         >
-          <h3>Enginuity (for Universities) Registration Form</h3>
+          <h2>Enginuity (for Universities) Registration Form</h2>
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
@@ -316,7 +319,7 @@ const BTFRegistration = () => {
             </div>
           </div>
           <div className="events-container">
-            <label className="label">Events</label>
+            <label className="label">Which event(s) would you like to register for? Hover over an event to learn more.</label>
             <div className="control">
               <label className="checkbox">
                 <input
@@ -604,7 +607,7 @@ const BTFRegistration = () => {
           className="container  m-4 pl-4"
           onSubmit={handleSubmit}
         >
-          <h3>Technofest (for Schools) Registration Form</h3>
+          <h2>Technofest (for Schools) Registration Form</h2>
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
@@ -746,7 +749,7 @@ const BTFRegistration = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">Events</label>
+            <label className="label">Which event(s) would you like to register for? Hover over an event to learn more.</label>
             <div className="control">
             <label className="checkbox">
                 <input

@@ -18,12 +18,15 @@
 
 
 .home-container > h1 {
-  color: #ffff;
-  font-size: 100px;
   font-family:'NeueMachina-Regular.otf';
   margin-top: -100px;
   text-align: center;
+  font-size: 72px;
+  background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 .home-container > p {
   margin-top: 8px;
