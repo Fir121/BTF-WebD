@@ -46,7 +46,6 @@ const Navbar = () => {
                 <div className='menu-icon' onClick={handleClick}>
                     {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
                         : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
-
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className='nav-links' style={{ color:"#FFFF;" }}>
