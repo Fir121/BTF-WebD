@@ -1,26 +1,44 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from './logo2-removebg.png'
 import logo3 from './BPDC Logo png.png'
 import './Navbar.css'
  
-document.addEventListener('scroll', () => {
-   const header=document.querySelector('.navbar');
-   if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-   } else {
-      header.classList.remove('scrolled');
-   }
-})
+
 const Navbar = () => {
 
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
+    const [button,setButton]=useState(true);
+    const [navbar, setNavbar]=useState(false);
 
     const closeMenu = () => setClick(false)
+    const showButton = () => {
+        if(window.innerWidth<=960) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
+    };
+
+    useEffect(() => {
+        showButton();
+      }, []);
+    
+    window.addEventListener('resize', showButton);
+
+    const changeBackground = () => {
+        if(window.scrollY >= 80) {
+            setNavbar(true);
+        } else {
+            setNavbar(false);
+        }
+    }
+
+    window.addEventListener('scroll',changeBackground);
 
     return (
-        <div className='navbar'>
+        <div className={navbar ? 'navbar active' : 'navbar'}>
             <nav className='navbar-container'>
                 <a href='#home' className='navbar-logo'>
                     <img src={logo} alt='logo' width="40" height="40" className="d-inline-block align-top"/>

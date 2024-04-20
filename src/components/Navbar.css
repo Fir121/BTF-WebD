@@ -1,5 +1,5 @@
-.navbar {
-  background:linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(20, 18, 18)90%); 
+.navbar.active{
+  background: black; 
   height: 80px;
   display: flex;
   justify-content:space-around;
@@ -12,10 +12,10 @@
   transition: background-color 0.4s ease-in-out;
 }
 
-.navbar scrolled {
-  background-color: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(20, 18, 18)90%);
-  opacity: 0.98;
-} 
+.navbar {
+ display:none;
+}
+
 
 .navbar-logo {
   justify-self:right;
@@ -103,9 +103,6 @@
   transition: color 0.4s ease-in-out
 }
 
-.navbar scrolled nav-links a {
-  color: white;
-} 
 
 .nav-links > a {
   color: #ffff;

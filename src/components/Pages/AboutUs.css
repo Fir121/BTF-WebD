@@ -29,12 +29,13 @@
 .about-us > p {
   color:#ffff;
   font-size: 20px;
-  width: 98%;
-  margin-left: 1rem;
+  width: 95%;
+  margin-left:3rem;
   margin-top: 1rem;
   font-family: "ClashDisplay-Medium";
   text-align:center;
-  justify-items:center;
+  align-self:center;
+  align-items:center;
 }
 
 .about-us > h2 {
@@ -42,7 +43,7 @@
   margin: 1rem 0;
   font-size: 50px;
   font-family:"ClashDisplay-Bold";
-  text-align: center;
+  text-align:center;
   justify-content: center;
 
 }
