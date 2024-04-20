@@ -12,8 +12,10 @@ const BTFRegistration = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    document.getElementById("message").textContent = "Submitting..";
-    document.getElementById("message").style.display = "block";
+    document.getElementById("message").textContent = " Submitting..";
+    document.getElementById("message").style.display = "block";    
+    document.getElementById("message").style.backgroundColor = "white";
+    document.getElementById("message").style.color = "black";
     document.getElementById("submit-button").disabled = true;
 
     // Collect the form data
@@ -45,7 +47,7 @@ const BTFRegistration = () => {
       .then(function (data) {
         // Display a success message
         document.getElementById("message").textContent =
-          "Data submitted successfully!";
+          " Data submitted successfully!";
         document.getElementById("message").style.display = "block";
         document.getElementById("message").style.backgroundColor = "green";
         document.getElementById("message").style.color = "beige";
@@ -66,8 +68,16 @@ const BTFRegistration = () => {
         console.error(error);
         document.getElementById("message").textContent =
           "An error occurred while submitting the form: " + error;
-        document.getElementById("message").style.display = "block";
+        document.getElementById("message").style.display = "block";                     
+        document.getElementById("message").style.backgroundColor = "white";
+        document.getElementById("message").style.color = "red";
       });
+
+      const handleNameInput = (event) => {
+        const inputValue = event.target.value;
+        const sanitizedValue = inputValue.replace(/[^A-Za-z\s]/g, "");
+        event.target.value = sanitizedValue;
+      };
   };
 
   /*
@@ -170,7 +180,7 @@ const BTFRegistration = () => {
         {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
         <form
           id="reg-form"
-          className="container  m-4 pl-4"
+          className="container m-4 pl-4"
           onSubmit={handleSubmit}
         >
           <h3>Enginuity (for Universities) Registration Form</h3>
@@ -182,11 +192,15 @@ const BTFRegistration = () => {
                 type="text"
                 placeholder="Full Name"
                 name="Name"
+                pattern="[A-Za-z\s]+"
+                title="Please enter only alphabets and spaces"
+                onInput={handleNameInput}
+                required
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">Institution</label>
+            <label className="label">University Name</label>
             <div className="control">
               <div className="select">
                 <select name="Institution">
@@ -321,7 +335,6 @@ const BTFRegistration = () => {
                 <input
                   type="checkbox"
                   name="Event 1"
-                  value="False"
                   /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
@@ -334,7 +347,6 @@ const BTFRegistration = () => {
                 <input
                   type="checkbox"
                   name="Event 2"
-                  value="False"
                   /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
@@ -347,7 +359,6 @@ const BTFRegistration = () => {
                 <input
                   type="checkbox"
                   name="Event 3"
-                  value="False"
                   /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
@@ -360,7 +371,6 @@ const BTFRegistration = () => {
                 <input
                   type="checkbox"
                   name="Event 4"
-                  value="False"
                   /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
@@ -397,7 +407,7 @@ const BTFRegistration = () => {
         {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
         <form
           id="reg-form"
-          className="container  m-4 pl-4"
+          className="container m-4 pl-4"
           onSubmit={handleSubmit}
         >
           <h3>Technofest (for Schools) Registration Form</h3>
@@ -408,19 +418,23 @@ const BTFRegistration = () => {
                 className="input"
                 type="text"
                 placeholder="Full Name"
-                name="Name"
+                name="Name"                
+                pattern="[A-Za-z\s]+"
+                title="Please enter only alphabets and spaces"
+                onInput={handleNameInput}
+                required
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">School</label>
+            <label className="label">School Name</label>
             <div className="control">
               <div className="select">
-                <select name="School">
+                <select name="Institution">
                   <option value="">Select an option</option>
-                  <option value="BITS">GEMS</option>
-                  <option value="Manipal">IHS</option>
-                  <option value="Amity">DPS</option>
+                  <option value="GEMS">GEMS</option>
+                  <option value="IHS">IHS</option>
+                  <option value="DPS">DPS</option>
                 </select>
               </div>
             </div>
@@ -545,19 +559,28 @@ const BTFRegistration = () => {
             <label className="label">Events</label>
             <div className="control">
               <label className="checkbox">
-                <input type="checkbox" name="Event 5" value="False" />
+                <input 
+                type="checkbox"
+                name="Event 5"
+                />
                 Event 5
               </label>
               <label className="checkbox">
-                <input type="checkbox" name="Event 6" value="False" />
+                <input type="checkbox"
+                name="Event 6"
+                />
                 Event 6
               </label>
               <label className="checkbox">
-                <input type="checkbox" name="Event 7" value="False" />
+                <input type="checkbox"
+                name="Event 7"
+                />
                 Event 7
               </label>
               <label className="checkbox">
-                <input type="checkbox" name="Event 8" value="False" />
+                <input type="checkbox"
+                name="Event 8"
+                />
                 Event 8
               </label>
             </div>
