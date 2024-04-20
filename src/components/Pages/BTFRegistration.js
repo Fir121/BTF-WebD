@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./RegForm.css";
 
 const API_LINK =
   "https://script.google.com/macros/s/AKfycbx0W50mPE7jEUkQu2jQcJGZG_QLcR1vwdqllRoMu-H2dM-NNrBqWdB13_owEjxGyaJ6zA/exec";
 
 const BTFRegistration = () => {
-  const [showIndividualModal, setShowIndividualModal] = useState(false);
+  /*const [showIndividualModal, setShowIndividualModal] = useState(false);
   const [showTeamModal, setShowTeamModal] = useState(false);
   const [showCreateTeamModal, setShowCreateTeamModal] = useState(false);
   const [showJoinTeamModal, setShowJoinTeamModal] = useState(false);
-  
+  */
 
   
  
@@ -72,7 +72,7 @@ const BTFRegistration = () => {
         document.getElementById("message").style.display = "block";
       });
   };
-  
+  /*
   const openModal = (modal) => {
     switch (modal) {
       case 'individual':
@@ -121,7 +121,7 @@ const BTFRegistration = () => {
     // Perform join team logic with joinCode
     closeModal();
   };
-  
+  */
   return (
     <div>
       {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
@@ -275,11 +275,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 1"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 1
             </label>
@@ -288,11 +288,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 2"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 2
             </label>
@@ -301,11 +301,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 3"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 3
             </label>
@@ -314,11 +314,11 @@ const BTFRegistration = () => {
                 type="checkbox"
                 name="Event 4"
                 value="False"
-                onChange={(event) => {
+                /*onChange={(event) => {
                   if (event.target.checked) {
                     openModal("team");
                   }
-                }}
+                }}*/
               />
               Event 4
             </label>
@@ -336,19 +336,16 @@ const BTFRegistration = () => {
           </div>
         </div>
       </form>
-      {showIndividualModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Individual Registration</h2>
-              <p>You have chosen to register as an individual for this event.</p>
-              <button className="button is-primary" onClick={confirmIndividual}>Confirm</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
+      
+      <div id="message" style={{ display: "none" }}></div>
+    </div>
+  );
+};
+
+export default BTFRegistration;
+
+// Modal logic for each event
+/*
 
       {showTeamModal && (
         <div className="modal is-active">
@@ -404,9 +401,17 @@ const BTFRegistration = () => {
           <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
         </div>
       )}
-      <div id="message" style={{ display: "none" }}></div>
-    </div>
-  );
-};
-
-export default BTFRegistration;
+      {showIndividualModal && (
+        <div className="modal is-active">
+          <div className="modal-background" onClick={closeModal}></div>
+          <div className="modal-content">
+            <div className="box">
+              <h2>Individual Registration</h2>
+              <p>You have chosen to register as an individual for this event.</p>
+              <button className="button is-primary" onClick={confirmIndividual}>Confirm</button>
+            </div>
+          </div>
+          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
+        </div>
+      )}
+      */

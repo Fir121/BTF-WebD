@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import { Button } from './Button';
 import './Homepage.css';
 import Empower from '../components/img-6.jpg';
 import Engage from '../components/img-7.jpg';
