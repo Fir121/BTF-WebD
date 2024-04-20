@@ -1,408 +1,478 @@
+/* Style the tab */
+.tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+      background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+      background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+}
+
+/* Style the close button */
+.topright {
+      float: right;
+      cursor: pointer;
+      font-size: 28px;
+}
+
+.topright:hover {
+      color: red;
+}
+
+.tabcontent {
+      display: none;
+}
+
 
 .form {
-  background:rgba(92, 5, 102, 0.502);
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-attachment:scroll;
-  height:300vh;
-  width: 100%;
-  display:-webkit-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  margin-left:2px;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  border-style: double;
-  border-width: 1px;
+      background: rgba(92, 5, 102, 0.502);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      height: 300vh;
+      width: 100%;
+      display: -webkit-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      margin-left: 2px;
+      box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+      border-style: double;
+      border-width: 1px;
 }
 
-
-.form > div {
- display:flex;
- margin-bottom: 20px;
- margin-left:1rem;
+.form>div {
+      display: flex;
+      margin-bottom: 20px;
+      margin-left: 1rem;
 }
 
-
-.form > h1 {
-  display: flex;
-  align-self:center;
-  font-family:'ClashDisplay-SemiBold';
-  color: #ffff;
-  margin-left:1rem;
-  font-size: 60px;
- 
- }
-
-.form > h3 {
- display: flex;
- align-self:center;
- text-align:center;
- font-family:'ClashDisplay-SemiBold';
- color: #ffff;
- margin-left:1rem;
- font-size: 40px;
+.form>h1 {
+      display: flex;
+      align-self: center;
+      font-family: 'ClashDisplay-SemiBold';
+      color: #ffff;
+      margin-left: 1rem;
+      font-size: 60px;
 
 }
 
-.form > div > p {
- display: flex;
- text-align:left;
- font-family:'ClashDisplay-Regular';
- color: #ffff;
- margin-left:10rem;
- font-size: 20px;
+.form>h3 {
+      display: flex;
+      align-self: center;
+      text-align: center;
+      font-family: 'ClashDisplay-SemiBold';
+      color: #ffff;
+      margin-left: 1rem;
+      font-size: 40px;
+
 }
+
+.form>div>p {
+      display: flex;
+      text-align: left;
+      font-family: 'ClashDisplay-Regular';
+      color: #ffff;
+      margin-left: 10rem;
+      font-size: 20px;
+}
+
 
 .container {
- max-width: 600px;
- background-color: #7F00FF;
- margin: 0 auto;
- padding: 2rem;
- background-color: #ffffff;
- border-radius: 6px;
- box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+      max-width: 600px;
+      background-color: #7F00FF;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
 
 .field {
- margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
 }
 
 .label {
- display: block;
- margin-bottom: 0.5rem;
- font-weight: 600;
- color: #363636;
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #363636;
 }
 
 .control {
- position: relative;
+      position: relative;
 }
 
 .input,
 .select select {
- width: 100%;
- padding: 0.75rem;
- border: 1px solid #dbdbdb;
- border-radius: 4px;
- background-color: #ffffff;
- color: #363636;
- font-size: 1rem;
- line-height: 1.5;
- transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #dbdbdb;
+      border-radius: 4px;
+      background-color: #ffffff;
+      color: #363636;
+      font-size: 1rem;
+      line-height: 1.5;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .input:focus,
 .select select:focus {
- outline: none;
- border-color: #3273dc;
- box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+      outline: none;
+      border-color: #3273dc;
+      box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
 }
 
 .select select {
- appearance: none;
- padding-right: 2.5rem;
- background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23363636' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
- background-repeat: no-repeat;
- background-position: right 0.75rem center;
- background-size: 8px 10px;
+      appearance: none;
+      padding-right: 2.5rem;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23363636' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 8px 10px;
 }
 
 .checkbox {
- display: inline-flex;
- align-items: center;
- margin-right: 1rem;
- margin-bottom: 0.5rem;
- font-size: 1rem;
- line-height: 1.5;
- color: #363636;
- cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #363636;
+      cursor: pointer;
 }
 
 .checkbox input[type="checkbox"] {
- margin-right: 0.5rem;
+      margin-right: 0.5rem;
 }
 
 .button {
- display: inline-flex;
- justify-content: center;
- align-items: center;
- align-self: center;
- height: 50px;
- width:200px;
- padding: 0.75rem 1.5rem;
- border: none;
- border-radius: 4px;
- background-color: #3273dc;
- color: #ffffff;
- font-size: 1rem;
- line-height: 1.5;
- text-align: center;
- cursor: pointer;
- transition: background-color 0.15s ease-in-out;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      height: 50px;
+      width: 200px;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #3273dc;
+      color: #ffffff;
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.15s ease-in-out;
 }
 
 .button:hover {
- background-color: #276cda;
+      background-color: #276cda;
 }
 
 .button:focus {
- outline: none;
- box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+      outline: none;
+      box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
 }
 
 .button:active {
- background-color: #2366d1;
+      background-color: #2366d1;
 }
 
 .message {
- margin-top: 1.5rem;
- padding: 1rem;
- border-radius: 4px;
- background-color: #f0f0f0;
- color: #363636;
- font-size: 1rem;
- line-height: 1.5;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 4px;
+      background-color: #f0f0f0;
+      color: #363636;
+      font-size: 1rem;
+      line-height: 1.5;
 }
 
 .message.is-success {
- background-color: #effaf3;
- color: #257942;
+      background-color: #effaf3;
+      color: #257942;
 }
 
 .message.is-danger {
- background-color: #feecf0;
- color: #cc0f35;
+      background-color: #feecf0;
+      color: #cc0f35;
 }
+
 .input-group-school {
- display: flex;
- flex-direction: column;
- margin: 1rem 0;
- font-family: 'ClashDisplay-Bold';
- align-self:Center;
- width:30%;
- color: #ffff;
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      font-family: 'ClashDisplay-Bold';
+      align-self: Center;
+      width: 30%;
+      color: #ffff;
 }
 
 .input-group-personal {
- display: flex;
- flex-direction: column;
- margin: 1rem 0;
- color:#ffff;
- font-family:'ClashDisplay-Medium';
- width: 30%;
- margin-bottom:1rem;
- align-self:center;
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      color: #ffff;
+      font-family: 'ClashDisplay-Medium';
+      width: 30%;
+      margin-bottom: 1rem;
+      align-self: center;
 }
-.input-group > label {
- font-size: 0.9rem;
- display:block;
- font-family:'ClashDisplay-Medium';
- font-weight: 700;
- color: #ffff;
- margin-bottom: 1rem;
+
+.input-group>label {
+      font-size: 0.9rem;
+      display: block;
+      font-family: 'ClashDisplay-Medium';
+      font-weight: 700;
+      color: #ffff;
+      margin-bottom: 1rem;
 }
 
 .input-group-accom {
- display: flex;
- flex-direction: column;
- margin: 1rem 0;
- color:#ffff;
- font-family:'ClashDisplay-Medium';
- width: 30%;
- margin-bottom:1rem;
- align-self:center;
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      color: #ffff;
+      font-family: 'ClashDisplay-Medium';
+      width: 30%;
+      margin-bottom: 1rem;
+      align-self: center;
 }
 
-.input-group-accom > label {
- font-size: 0.9rem;
- display:block;
- font-family:'ClashDisplay-Regular';
- font-weight: 700;
- color:#ffff;
- margin-bottom: 1rem;
+.input-group-accom>label {
+      font-size: 0.9rem;
+      display: block;
+      font-family: 'ClashDisplay-Regular';
+      font-weight: 700;
+      color: #ffff;
+      margin-bottom: 1rem;
 }
 
-.events-container > h3{
- display: flex;
- align-self:center;
- font-family:'ClashDisplay-SemiBold';
- color: #ffff;
- margin-left:1rem;
- font-size: 30px;
+.events-container>h3 {
+      display: flex;
+      align-self: center;
+      font-family: 'ClashDisplay-SemiBold';
+      color: #ffff;
+      margin-left: 1rem;
+      font-size: 30px;
 }
 
 .events-container {
-   width: 80%;
-   height: 400px;
-   padding: 10px;
-   border: 1px white;
-   border-style:double;
-   position:sticky;
-   margin: 1rem 0;
-   align-self:center;
+      width: 80%;
+      height: 400px;
+      padding: 10px;
+      border: 1px white;
+      border-style: double;
+      position: sticky;
+      margin: 1rem 0;
+      align-self: center;
 }
+
 .container-1 {
- margin: 1rem 0;
- display: block;
- position: relative;
- padding-left: 0px;
- margin-left: 10rem;
- margin-bottom: 1rem;
- cursor: pointer;
- font-size: 22px;
- -webkit-user-select: none;
- -moz-user-select: none;
- -ms-user-select: none;
- user-select: none;
- max-width:40%;
- font-family: 'ClashDisplay-Regular';
- color:#ffff;
+      margin: 1rem 0;
+      display: block;
+      position: relative;
+      padding-left: 0px;
+      margin-left: 10rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      max-width: 40%;
+      font-family: 'ClashDisplay-Regular';
+      color: #ffff;
 }
 
 .container-2 {
- margin: 1rem 0;
- margin-left: 25rem;
- display: block;
- position: relative;
- padding-left: 35px;
- margin-bottom: 1rem;
- cursor: pointer;
- font-size: 22px;
- -webkit-user-select: none;
- -moz-user-select: none;
- -ms-user-select: none;
- user-select: none;
- max-width: 40%;
- font-family: 'ClashDisplay-Regular';
- color:#ffff;
+      margin: 1rem 0;
+      margin-left: 25rem;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      max-width: 40%;
+      font-family: 'ClashDisplay-Regular';
+      color: #ffff;
 }
 
 .input {
- width: 50%;
- max-width:800px;
- margin-bottom:1rem;
+      width: 50%;
+      max-width: 800px;
+      margin-bottom: 1rem;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
- width: 65%;
- padding: 5px;
- border: 1px solid #ccc;
- border-radius: 3px;
- box-sizing: border-box;
- background:transparent;
- margin-bottom:1rem;
+      width: 65%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      background: transparent;
+      margin-bottom: 1rem;
 }
 
 
-.input > div {
- padding: 0.5rem 1rem;
- background: #e34728;
- margin-left: 0.5rem;
- color: #fff;
- font-weight: 700;
- cursor: pointer;
+.input>div {
+      padding: 0.5rem 1rem;
+      background: #e34728;
+      margin-left: 0.5rem;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
 }
+
 .add-btn {
- padding: 0.5rem 1rem;
- background: #ccc;
- border: none;
- font-size: 0.9rem;
- color: #fff;
- font-weight: 700;
- cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #ccc;
+      border: none;
+      font-size: 0.9rem;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
 }
+
 .center {
- display: flex;
- justify-content: center;
+      display: flex;
+      justify-content: center;
 }
+
 .submit-btn {
- width: 40%;
- align-self: center;
- padding: 0.5rem 1rem;
- margin-bottom: 3rem;
- background: #000000;
- font-size: 0.9rem;
- font-weight: 700;
- color:#ffff;
- cursor: pointer;
+      width: 40%;
+      align-self: center;
+      padding: 0.5rem 1rem;
+      margin-bottom: 3rem;
+      background: #000000;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffff;
+      cursor: pointer;
 }
+
 .submit-btn:hover {
- background-color: #7F00FF;
+      background-color: #7F00FF;
 }
+
 .dialog-box {
- margin: 0.5rem 0;
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
- grid-gap: 1rem;
- font-family:'ClashDisplay-Regular';
- color:#ffff;
+      margin: 0.5rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+      grid-gap: 1rem;
+      font-family: 'ClashDisplay-Regular';
+      color: #ffff;
 }
-.dialog-box > input,
-.dialog-box > select {
- padding: 0.5rem 0.5rem;
- border: 1px solid rgba(92, 5, 102, 0.502);
+
+.dialog-box>input,
+.dialog-box>select {
+      padding: 0.5rem 0.5rem;
+      border: 1px solid rgba(92, 5, 102, 0.502);
 }
-.dialog-box > input:focus,
-.dialog-box > select:focus {
- outline: none;
+
+.dialog-box>input:focus,
+.dialog-box>select:focus {
+      outline: none;
 }
+
 .hide {
- display: none;
+      display: none;
 }
+
 .modal {
- display: none;
- position: fixed;
- z-index: 1;
- left: 0;
- top: 0;
- width: 100%;
- height: 100%;
- overflow: auto;
- background-color: rgba(0, 0, 0, 0.4);
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal-content {
- background-color: #fefefe;
- margin: 15% auto;
- padding: 20px;
- border: 1px solid #888;
- width: 80%;
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
 }
+
 .close {
- color: #aaa;
- float: right;
- font-size: 28px;
- font-weight: bold;
- cursor: pointer;
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
 }
+
 .close:hover,
 .close:focus {
- color: #7F00FF;
- text-decoration: none;
- cursor: pointer;
+      color: #7F00FF;
+      text-decoration: none;
+      cursor: pointer;
 }
+
 table {
- width: 100%;
- border-collapse: collapse;
+      width: 100%;
+      border-collapse: collapse;
 }
-th, td {
- padding: 8px;
- text-align: left;
- border-bottom: 1px solid #ddd;
+
+th,
+td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
 }
+
 tr:hover {
- background-color: #f5f5f5;
+      background-color: #f5f5f5;
 }
 
 @font-face {
- font-family: 'ClashDisplay-Variable';
- src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
-      url('../fonts/ClashDisplay-Variable.woff') format('woff'),
-      url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
+      font-family: 'ClashDisplay-Variable';
+      src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+            url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
       font-weight: 200 700;
       font-display: swap;
       font-style: normal;
@@ -410,10 +480,10 @@ tr:hover {
 
 
 @font-face {
- font-family: 'ClashDisplay-Extralight';
- src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
-      url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
-      url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
+      font-family: 'ClashDisplay-Extralight';
+      src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
+            url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
       font-weight: 200;
       font-display: swap;
       font-style: normal;
@@ -421,10 +491,10 @@ tr:hover {
 
 
 @font-face {
- font-family: 'ClashDisplay-Light';
- src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
-      url('../fonts/ClashDisplay-Light.woff') format('woff'),
-      url('../fonts/ClashDisplay-Light.ttf') format('truetype');
+      font-family: 'ClashDisplay-Light';
+      src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Light.woff') format('woff'),
+            url('../fonts/ClashDisplay-Light.ttf') format('truetype');
       font-weight: 300;
       font-display: swap;
       font-style: normal;
@@ -432,10 +502,10 @@ tr:hover {
 
 
 @font-face {
- font-family: 'ClashDisplay-Regular';
- src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
-      url('../fonts/ClashDisplay-Regular.woff') format('woff'),
-      url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
+      font-family: 'ClashDisplay-Regular';
+      src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+            url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
       font-weight: 400;
       font-display: swap;
       font-style: normal;
@@ -443,10 +513,10 @@ tr:hover {
 
 
 @font-face {
- font-family: 'ClashDisplay-Medium';
- src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
-      url('../fonts/ClashDisplay-Medium.woff') format('woff'),
-      url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
+      font-family: 'ClashDisplay-Medium';
+      src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+            url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
       font-weight: 500;
       font-display: swap;
       font-style: normal;
@@ -454,10 +524,10 @@ tr:hover {
 
 
 @font-face {
- font-family: 'ClashDisplay-Semibold';
- src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-      url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
-      url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
+      font-family: 'ClashDisplay-Semibold';
+      src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+            url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
       font-weight: 600;
       font-display: swap;
       font-style: normal;
@@ -465,10 +535,10 @@ tr:hover {
 
 
 @font-face {
- font-family: 'ClashDisplay-Bold';
- src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
-      url('../fonts/ClashDisplay-Bold.woff') format('woff'),
-      url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
+      font-family: 'ClashDisplay-Bold';
+      src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+            url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
       font-weight: 700;
       font-display: swap;
       font-style: normal;

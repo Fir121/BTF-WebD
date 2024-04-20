@@ -11,8 +11,6 @@ const BTFRegistration = () => {
   const [showJoinTeamModal, setShowJoinTeamModal] = useState(false);
   */
 
-  
- 
   const handleSubmit = (event) => {
     event.preventDefault();
     document.getElementById("message").textContent = "Submitting..";
@@ -72,6 +70,7 @@ const BTFRegistration = () => {
         document.getElementById("message").style.display = "block";
       });
   };
+
   /*
   const openModal = (modal) => {
     switch (modal) {
@@ -122,222 +121,454 @@ const BTFRegistration = () => {
     closeModal();
   };
   */
+
+  const openTab = (evt, tabName) => {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  };
+
   return (
     <div>
-      {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
-      <form id="reg-form" className="container  m-4 pl-4" onSubmit={handleSubmit}>
-        <h3>Enginuity (for Universities) Registration Form</h3>
-        <div className="field">
-          <label className="label">Name</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              placeholder="Full Name"
-              name="Name"
-            />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Institution</label>
-          <div className="control">
-            <div className="select">
-              <select name="Institution">
-                <option value="">Select an option</option>
-                <option value="BITS">BITS</option>
-                <option value="Manipal">Manipal</option>
-                <option value="Amity">Amity</option>
-              </select>
+      <div className="tab">
+        <button
+          className="tablinks"
+          onClick={(evt) => openTab(evt, "Enginuity")}
+        >
+          Enginuity
+        </button>
+        <button
+          className="tablinks"
+          onClick={(evt) => openTab(evt, "Technofest")}
+        >
+          Technofest
+        </button>
+      </div>
+      <div id="Enginuity" className="tabcontent">
+        <span
+          onclick="this.parentElement.style.display='none'"
+          class="topright"
+        >
+          &times;
+        </span>
+        {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
+        <form
+          id="reg-form"
+          className="container  m-4 pl-4"
+          onSubmit={handleSubmit}
+        >
+          <h3>Enginuity (for Universities) Registration Form</h3>
+          <div className="field">
+            <label className="label">Name</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Full Name"
+                name="Name"
+              />
             </div>
           </div>
-        </div>
-        <div className="field">
-          <label className="label">Student-ID</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              placeholder="Student-ID"
-              name="Student-ID"
-            />
+          <div className="field">
+            <label className="label">Institution</label>
+            <div className="control">
+              <div className="select">
+                <select name="Institution">
+                  <option value="">Select an option</option>
+                  <option value="BITS">BITS</option>
+                  <option value="Manipal">Manipal</option>
+                  <option value="Amity">Amity</option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="field">
-          <label className="label">Emirates-ID</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              placeholder="Enter valid Emirates ID"
-              name="Emirates-ID"
-              maxLength="18"
-              onKeyDown={(event) => {
-                const input = event.target;
-                const key = event.key;
-                const value = input.value;
-                const selectionStart = input.selectionStart;
+          <div className="field">
+            <label className="label">Student-ID</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Student-ID"
+                name="Student-ID"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Emirates-ID</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Enter valid Emirates ID"
+                name="Emirates-ID"
+                maxLength="18"
+                onKeyDown={(event) => {
+                  const input = event.target;
+                  const key = event.key;
+                  const value = input.value;
+                  const selectionStart = input.selectionStart;
 
-                if (key === "Backspace") {
-                  if (value[selectionStart - 1] === "-") {
-                    event.preventDefault();
-                    input.value =
-                      value.slice(0, selectionStart - 1) +
-                      value.slice(selectionStart);
-                    input.setSelectionRange(
-                      selectionStart - 1,
-                      selectionStart - 1
+                  if (key === "Backspace") {
+                    if (value[selectionStart - 1] === "-") {
+                      event.preventDefault();
+                      input.value =
+                        value.slice(0, selectionStart - 1) +
+                        value.slice(selectionStart);
+                      input.setSelectionRange(
+                        selectionStart - 1,
+                        selectionStart - 1
+                      );
+                    }
+                  }
+                }}
+                onInput={(event) => {
+                  const input = event.target;
+                  let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
+                  const groups = [3, 4, 7, 4]; // Digit groups for formatting
+
+                  let formattedValue = "";
+                  let startIndex = 0;
+
+                  for (let i = 0; i < groups.length; i++) {
+                    if (value.length > startIndex) {
+                      if (i > 0) {
+                        formattedValue += "-";
+                      }
+                      formattedValue += value.substr(startIndex, groups[i]);
+                      startIndex += groups[i];
+                    } else {
+                      break;
+                    }
+                  }
+
+                  input.value = formattedValue;
+                }}
+                required
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Year</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                onInput={(event) => {
+                  if (event.target.value.length > event.target.maxLength) {
+                    event.target.value = event.target.value.slice(
+                      0,
+                      event.target.maxLength
                     );
                   }
-                }
-              }}
-              onInput={(event) => {
-                const input = event.target;
-                let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
-                const groups = [3, 4, 7, 4]; // Digit groups for formatting
+                }}
+                placeholder="Year"
+                name="Year"
+                maxLength="1"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Email</label>
+            <div className="control">
+              <input
+                className="input"
+                type="email"
+                placeholder="Email"
+                name="Email"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Mobile Number</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                onInput={(event) => {
+                  if (event.target.value.length > event.target.maxLength) {
+                    event.target.value = event.target.value.slice(
+                      0,
+                      event.target.maxLength
+                    );
+                  }
+                }}
+                placeholder="10 digit Number"
+                name="Mobile Number"
+                maxLength="10"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Events</label>
+            <div className="control">
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 1"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                Event 1
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 2"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                Event 2
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 3"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                Event 3
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 4"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                Event 4
+              </label>
+            </div>
+          </div>
+          <div className="field is-grouped">
+            <div className="control">
+              <button
+                className="button is-primary"
+                type="submit"
+                id="submit-button"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </form>
 
-                let formattedValue = "";
-                let startIndex = 0;
+        <div id="message" style={{ display: "none" }}></div>
+      </div>
 
-                for (let i = 0; i < groups.length; i++) {
-                  if (value.length > startIndex) {
-                    if (i > 0) {
-                      formattedValue += "-";
+      <div id="Technofest" className="tabcontent">
+        <span
+          onclick="this.parentElement.style.display='none'"
+          class="topright"
+        >
+          &times;
+        </span>
+        {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
+        <form
+          id="reg-form"
+          className="container  m-4 pl-4"
+          onSubmit={handleSubmit}
+        >
+          <h3>Technofest (for Schools) Registration Form</h3>
+          <div className="field">
+            <label className="label">Name</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Full Name"
+                name="Name"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">School</label>
+            <div className="control">
+              <div className="select">
+                <select name="School">
+                  <option value="">Select an option</option>
+                  <option value="BITS">GEMS</option>
+                  <option value="Manipal">IHS</option>
+                  <option value="Amity">DPS</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Student-ID</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Student-ID"
+                name="Student-ID"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Emirates-ID</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Enter valid Emirates ID"
+                name="Emirates-ID"
+                maxLength="18"
+                onKeyDown={(event) => {
+                  const input = event.target;
+                  const key = event.key;
+                  const value = input.value;
+                  const selectionStart = input.selectionStart;
+
+                  if (key === "Backspace") {
+                    if (value[selectionStart - 1] === "-") {
+                      event.preventDefault();
+                      input.value =
+                        value.slice(0, selectionStart - 1) +
+                        value.slice(selectionStart);
+                      input.setSelectionRange(
+                        selectionStart - 1,
+                        selectionStart - 1
+                      );
                     }
-                    formattedValue += value.substr(startIndex, groups[i]);
-                    startIndex += groups[i];
-                  } else {
-                    break;
                   }
-                }
+                }}
+                onInput={(event) => {
+                  const input = event.target;
+                  let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
+                  const groups = [3, 4, 7, 4]; // Digit groups for formatting
 
-                input.value = formattedValue;
-              }}
-              required
-            />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Year</label>
-          <div className="control">
-            <input
-              className="input"
-              type="number"
-              onInput={(event) => {
-                if (event.target.value.length > event.target.maxLength) {
-                  event.target.value = event.target.value.slice(
-                    0,
-                    event.target.maxLength
-                  );
-                }
-              }}
-              placeholder="Year"
-              name="Year"
-              maxLength="1"
-            />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Email</label>
-          <div className="control">
-            <input
-              className="input"
-              type="email"
-              placeholder="Email"
-              name="Email"
-            />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Mobile Number</label>
-          <div className="control">
-            <input
-              className="input"
-              type="number"
-              onInput={(event) => {
-                if (event.target.value.length > event.target.maxLength) {
-                  event.target.value = event.target.value.slice(
-                    0,
-                    event.target.maxLength
-                  );
-                }
-              }}
-              placeholder="10 digit Number"
-              name="Mobile Number"
-              maxLength="10"
-            />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Events</label>
-          <div className="control">
-            <label className="checkbox">
-              <input
-                type="checkbox"
-                name="Event 1"
-                value="False"
-                /*onChange={(event) => {
-                  if (event.target.checked) {
-                    openModal("team");
+                  let formattedValue = "";
+                  let startIndex = 0;
+
+                  for (let i = 0; i < groups.length; i++) {
+                    if (value.length > startIndex) {
+                      if (i > 0) {
+                        formattedValue += "-";
+                      }
+                      formattedValue += value.substr(startIndex, groups[i]);
+                      startIndex += groups[i];
+                    } else {
+                      break;
+                    }
                   }
-                }}*/
+
+                  input.value = formattedValue;
+                }}
+                required
               />
-              Event 1
-            </label>
-            <label className="checkbox">
-              <input
-                type="checkbox"
-                name="Event 2"
-                value="False"
-                /*onChange={(event) => {
-                  if (event.target.checked) {
-                    openModal("team");
-                  }
-                }}*/
-              />
-              Event 2
-            </label>
-            <label className="checkbox">
-              <input
-                type="checkbox"
-                name="Event 3"
-                value="False"
-                /*onChange={(event) => {
-                  if (event.target.checked) {
-                    openModal("team");
-                  }
-                }}*/
-              />
-              Event 3
-            </label>
-            <label className="checkbox">
-              <input
-                type="checkbox"
-                name="Event 4"
-                value="False"
-                /*onChange={(event) => {
-                  if (event.target.checked) {
-                    openModal("team");
-                  }
-                }}*/
-              />
-              Event 4
-            </label>
+            </div>
           </div>
-        </div>
-        <div className="field is-grouped">
-          <div className="control">
-            <button
-              className="button is-primary"
-              type="submit"
-              id="submit-button"
-            >
-              Sign Up
-            </button>
+          <div className="field">
+            <label className="label">Grade</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                onInput={(event) => {
+                  if (event.target.value.length > event.target.maxLength) {
+                    event.target.value = event.target.value.slice(
+                      0,
+                      event.target.maxLength
+                    );
+                  }
+                }}
+                placeholder="Grade"
+                name="Grade"
+                maxLength="1"
+              />
+            </div>
           </div>
-        </div>
-      </form>
-      
-      <div id="message" style={{ display: "none" }}></div>
+          <div className="field">
+            <label className="label">Email</label>
+            <div className="control">
+              <input
+                className="input"
+                type="email"
+                placeholder="Email"
+                name="Email"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Mobile Number</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                onInput={(event) => {
+                  if (event.target.value.length > event.target.maxLength) {
+                    event.target.value = event.target.value.slice(
+                      0,
+                      event.target.maxLength
+                    );
+                  }
+                }}
+                placeholder="10 digit Number"
+                name="Mobile Number"
+                maxLength="10"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Events</label>
+            <div className="control">
+              <label className="checkbox">
+                <input type="checkbox" name="Event 5" value="False" />
+                Event 5
+              </label>
+              <label className="checkbox">
+                <input type="checkbox" name="Event 6" value="False" />
+                Event 6
+              </label>
+              <label className="checkbox">
+                <input type="checkbox" name="Event 7" value="False" />
+                Event 7
+              </label>
+              <label className="checkbox">
+                <input type="checkbox" name="Event 8" value="False" />
+                Event 8
+              </label>
+            </div>
+          </div>
+          <div className="field is-grouped">
+            <div className="control">
+              <button
+                className="button is-primary"
+                type="submit"
+                id="submit-button"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div id="message" style={{ display: "none" }}></div>
+      </div>
     </div>
   );
 };
