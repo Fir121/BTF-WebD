@@ -1,5 +1,5 @@
 .navbar {
-  background:linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(20, 18, 18)90%); ; 
+  background:linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(20, 18, 18)90%); 
   height: 80px;
   display: flex;
   justify-content:space-around;
@@ -9,13 +9,13 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: background-color 0.4s ease-in-out;
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  z-index: 20;
-}
+.navbar scrolled {
+  background-color: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(20, 18, 18)90%);
+  opacity: 0.98;
+} 
 
 .navbar-logo {
   justify-self:right;
@@ -93,14 +93,19 @@
 
 
 .nav-links {
-  color: #ffff;
+  color: #000;
   display: flex;
   align-items: center;
   text-decoration: none;
   font-family:'ClashDisplay-Regular';
   padding: 0.5rem 1rem;
   height: 100%;
+  transition: color 0.4s ease-in-out
 }
+
+.navbar scrolled nav-links a {
+  color: white;
+} 
 
 .nav-links > a {
   color: #ffff;

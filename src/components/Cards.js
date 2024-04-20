@@ -61,6 +61,52 @@ function Cards() {
               path='/'
             />
           </ul>
+          <ul className='cards__items'>
+             <CardItem
+              src='images/event1.jpg'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus.'
+              label='9'
+              path='/homepage'
+            />
+             <CardItem
+              src='images/event1.jpg'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus.'
+              label='10'
+              path='/homepage'
+            />
+             <CardItem
+              src='images/event1.jpg'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus.'
+              label='11'
+              path='/homepage'
+            />
+             <CardItem
+              src='images/event1.jpg'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus.'
+              label='12'
+              path='/homepage'
+            />
+          </ul>
+          <ul className='cards__items'>
+             <CardItem
+              src='images/event1.jpg'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus.'
+              label='1'
+              path='/homepage'
+            />
+             <CardItem
+              src='images/event1.jpg'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus.'
+              label='1'
+              path='/homepage'
+            />
+             <CardItem
+              src='images/event1.jpg'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus.'
+              label='1'
+              path='/homepage'
+            />
+          </ul>
         </div>
       </div>
     </div>
