@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./RegForm.css";
 import EventCards from './EventCards.js';
 const API_LINK =
@@ -135,6 +135,14 @@ const BTFRegistration = () => {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   };
+  useEffect(() => {
+    const closeButtons = document.getElementsByClassName("topright");
+    for (let i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].addEventListener("click", function () {
+        this.parentElement.style.display = "none";
+      });
+    }
+  }, []);
 
   return (
     <div>
@@ -155,7 +163,7 @@ const BTFRegistration = () => {
       </div>
       <div id="Enginuity" className="tabcontent">
         <span
-          onclick="this.parentElement.style.display='none'"
+          id="closeEnginuity"
           class="topright"
         >
           &times;
@@ -585,7 +593,7 @@ const BTFRegistration = () => {
 
       <div id="Technofest" className="tabcontent">
         <span
-          onclick="this.parentElement.style.display='none'"
+          id="closeEnginuity"
           class="topright"
         >
           &times;
