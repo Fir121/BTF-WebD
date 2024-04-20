@@ -1,6 +1,5 @@
 import React from "react";
 import "./RegForm.css";
-
 const API_LINK =
   "https://script.google.com/macros/s/AKfycbx0W50mPE7jEUkQu2jQcJGZG_QLcR1vwdqllRoMu-H2dM-NNrBqWdB13_owEjxGyaJ6zA/exec";
 
@@ -138,6 +137,7 @@ const BTFRegistration = () => {
 
   return (
     <div>
+      <h2>Register Now!</h2>
       <div className="tab">
         <button
           className="tablinks"
@@ -306,7 +306,7 @@ const BTFRegistration = () => {
               />
             </div>
           </div>
-          <div className="field">
+          <div className="events-container">
             <label className="label">Events</label>
             <div className="control">
               <label className="checkbox">
@@ -320,7 +320,7 @@ const BTFRegistration = () => {
                   }
                 }}*/
                 />
-                Event 1
+                 Event 1
               </label>
               <label className="checkbox">
                 <input
@@ -569,6 +569,7 @@ const BTFRegistration = () => {
 
         <div id="message" style={{ display: "none" }}></div>
       </div>
+
     </div>
   );
 };
