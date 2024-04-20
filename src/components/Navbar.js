@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
-    const [button,setButton]=useState(true);
+    const [,setButton]=useState(true);
     const [navbar, setNavbar]=useState(false);
 
     const closeMenu = () => setClick(false)
@@ -48,7 +48,7 @@ const Navbar = () => {
                         : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-links' style={{ color:"#FFFF;" }}>
+                    <li className='nav-links'>
                         <a href='/' onClick={closeMenu}>Home</a>
                     </li>
                     <li className='nav-links'>

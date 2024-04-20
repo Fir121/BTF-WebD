@@ -15,8 +15,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-        <Route path='/' exact element={ <Homepage />}></Route>
-        <Route path='#reg-form' exact element={ <BTFRegistration />}></Route>
+        <Route path='/' element={ <Homepage />}></Route>
+        <Route path='#reg-form' element={ <BTFRegistration />}></Route>
         <Route path="#about-us" element={<AboutUs />} />
         <Route path="#events" element={<Cards />} />
         </Routes> 
@@ -27,4 +27,3 @@ function App() {
  }
 
 export default App;
-
