@@ -38,9 +38,6 @@ function Homepage() {
        </div>
       </div>
       
-      <div id='events'>
-       <Cards />
-      </div>
       <div title='reg-form'>
        <BTFRegistration />
       </div>

@@ -20,7 +20,7 @@
 .home-container > h1 {
   color: #ffff;
   font-size: 100px;
-  font-family:'ClashDisplay-Bold';
+  font-family:'NeueMachina-Regular.otf';
   margin-top: -100px;
   text-align: center;
 }
@@ -164,6 +164,14 @@
   src: url('./fonts/ClashDisplay-Extralight.woff2') format('woff2'),
        url('./fonts/ClashDisplay-Extralight.woff') format('woff'),
        url('./fonts/ClashDisplay-Extralight.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMachina-Regular';
+  src: url('./fonts/NeueMachina-Regular.woff2') format('woff');
        font-weight: 200;
        font-display: swap;
        font-style: normal;

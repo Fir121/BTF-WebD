@@ -1,5 +1,6 @@
 import React from "react";
 import "./RegForm.css";
+import EventCards from './EventCards.js';
 const API_LINK =
   "https://script.google.com/macros/s/AKfycbx0W50mPE7jEUkQu2jQcJGZG_QLcR1vwdqllRoMu-H2dM-NNrBqWdB13_owEjxGyaJ6zA/exec";
 
@@ -320,7 +321,11 @@ const BTFRegistration = () => {
                   }
                 }}*/
                 />
-                 Event 1
+                 <EventCards 
+                   src='images/event1.jpg'
+                   eventName='event1'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='1'/>
               </label>
               <label className="checkbox">
                 <input
@@ -333,7 +338,11 @@ const BTFRegistration = () => {
                   }
                 }}*/
                 />
-                Event 2
+                <EventCards 
+                   src='images/event2.jpg'
+                   eventName='event2'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='2'/>
               </label>
               <label className="checkbox">
                 <input
@@ -346,7 +355,11 @@ const BTFRegistration = () => {
                   }
                 }}*/
                 />
-                Event 3
+                <EventCards 
+                   src='images/event3.jpg'
+                   eventName='event3'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='3'/>
               </label>
               <label className="checkbox">
                 <input
@@ -359,7 +372,198 @@ const BTFRegistration = () => {
                   }
                 }}*/
                 />
-                Event 4
+                <EventCards 
+                   src='images/event4.jpg'
+                   eventName='event4'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='4'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 5"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event5.jpg'
+                   eventName='event5'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='5'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 6"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event6.jpg'
+                   eventName='event6'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='6'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 7"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event7.jpg'
+                   eventName='event7'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='7'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 8"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event8.jpg'
+                   eventName='event8'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='8'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 9"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event1.jpg'
+                   eventName='event9'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='9'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 10"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event2.jpg'
+                   eventName='event10'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='10'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 11"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event3.jpg'
+                   eventName='event11'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='11'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 12"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event4.jpg'
+                   eventName='event12'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='12'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 13"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event5.jpg'
+                   eventName='event13'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='13'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 14"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event6.jpg'
+                   eventName='event14'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='14'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 15"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event7.jpg'
+                   eventName='event15'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='15'/>
               </label>
             </div>
           </div>
@@ -536,21 +740,260 @@ const BTFRegistration = () => {
           <div className="field">
             <label className="label">Events</label>
             <div className="control">
-              <label className="checkbox">
-                <input type="checkbox" name="Event 5" value="False" />
-                Event 5
+            <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 1"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                 <EventCards 
+                   src='images/event1.jpg'
+                   eventName='event1'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='1'/>
               </label>
               <label className="checkbox">
-                <input type="checkbox" name="Event 6" value="False" />
-                Event 6
+                <input
+                  type="checkbox"
+                  name="Event 2"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event2.jpg'
+                   eventName='event2'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='2'/>
               </label>
               <label className="checkbox">
-                <input type="checkbox" name="Event 7" value="False" />
-                Event 7
+                <input
+                  type="checkbox"
+                  name="Event 3"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event3.jpg'
+                   eventName='event3'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='3'/>
               </label>
               <label className="checkbox">
-                <input type="checkbox" name="Event 8" value="False" />
-                Event 8
+                <input
+                  type="checkbox"
+                  name="Event 4"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event4.jpg'
+                   eventName='event4'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='4'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 5"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event5.jpg'
+                   eventName='event5'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='5'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 6"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event6.jpg'
+                   eventName='event6'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='6'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 7"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event7.jpg'
+                   eventName='event7'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='7'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 8"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event8.jpg'
+                   eventName='event8'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='8'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 9"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event1.jpg'
+                   eventName='event9'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='9'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 10"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event2.jpg'
+                   eventName='event10'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='10'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 11"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event3.jpg'
+                   eventName='event11'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='11'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 12"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event4.jpg'
+                   eventName='event12'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='12'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 13"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event5.jpg'
+                   eventName='event13'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='13'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 14"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event6.jpg'
+                   eventName='event14'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='14'/>
+              </label>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  name="Event 15"
+                  value="False"
+                  /*onChange={(event) => {
+                  if (event.target.checked) {
+                    openModal("team");
+                  }
+                }}*/
+                />
+                <EventCards 
+                   src='images/event7.jpg'
+                   eventName='event15'
+                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
+                   label='15'/>
               </label>
             </div>
           </div>
