@@ -40,7 +40,7 @@ function Footer() {
               to='/'
               target='_blank'
               aria-label='LinkedIn'
-              onClick={() => window.open('https://www.linkedin.com/company/bits-tech-fest/')}
+              onClick={() => window.open('https://www.linkedin.com/school/birla-institute-of-technology-and-science-pilani-dubai/')}
             >
               <i class='fab fa-linkedin' />
             </Link>
