@@ -4,7 +4,6 @@ import './Homepage.css';
 import Empower from '../components/img-6.jpg';
 import Engage from '../components/img-7.jpg';
 import Excel from '../components/img-8.jpg';
-import Cards from '../components/Cards';
 import AboutUs from '../components/Pages/AboutUs';
 import BTFRegistration from '../components/Pages/BTFRegistration';
 
@@ -18,7 +17,7 @@ function Homepage() {
        <p> The UAE's largest Tech Festival </p> <br/>
        <p> May 1 and 2, 2024 </p>
        <button class="btn" type="button">
-         <a href='#reg-form'>SIGN UP!</a>
+         <a href="#reg-form">SIGN UP!</a>
           <div id="container-stars">
            <div id="stars"></div>
            </div>
@@ -42,7 +41,7 @@ function Homepage() {
        </div>
       </div>
       
-      <div id='reg-form'>
+      <div id="reg-form">
        <BTFRegistration />
       </div>
       <div id='about-us'>
