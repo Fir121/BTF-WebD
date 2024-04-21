@@ -66,4 +66,22 @@
     font-size: 15px;
     transform: rotateY(180deg);
   }
+
+  @media only screen and (min-width: 1200px) {
+    .content__blog__container {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .card {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .card {
+      margin-bottom: 2rem;
+    }
+  }
   
