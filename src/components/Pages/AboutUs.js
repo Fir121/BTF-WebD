@@ -16,13 +16,13 @@ const AboutUs = () => {
         <h2>Themes for BTF 2024</h2>
         <div className='themes-container'>
          <div className='theme' style={{ backgroundImage: `url(${icon1})` }}>
-          <p> Artificial intelligence as a Driving Force for the Economy & Society </p>
+          <p> Cyber Resilience – Beyond Cyber Security </p>
          </div>
          <div className='theme' style={{ backgroundImage: `url(${icon2})` }}> 
-          <p>Cyber Resilience – Beyond Cyber Security </p>
+          <p>Sustainable Practices for Energy and Climate Change</p>
          </div>
          <div className='theme' style={{ backgroundImage: `url(${icon3})` }}>
-          <p> Sustainable Practices for Energy and Climate Change</p>
+          <p> Artificial intelligence as a Driving Force for the Economy & Society</p>
          </div>
         </div>
         

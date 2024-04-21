@@ -351,7 +351,7 @@ const BTFRegistration = () => {
                 }}*/
                 />
                  <EventCards 
-                   src='images/event1.jpg'
+                   src='images/variant2.png'
                    eventName='event1'
                    text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
                    label='1'/>
@@ -695,7 +695,7 @@ const BTFRegistration = () => {
                   name="Event 1"
                 />
                  <EventCards 
-                   src='images/event1.jpg'
+                   src='images/variant2.png'
                    eventName='event1'
                    text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
                    label='1'/>
@@ -860,7 +860,7 @@ const BTFRegistration = () => {
           <div className="field is-grouped">
             <div className="control">
               <button
-                className="btn"
+                className="sign-up-button"
                 type="submit"
                 id="submit-button-Technofest"
               >

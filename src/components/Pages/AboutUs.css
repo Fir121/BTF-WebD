@@ -63,6 +63,7 @@
 }
 
 .theme {
+  background: transparent;
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:scroll; 
@@ -72,12 +73,6 @@
   height:320px;
   margin: 20px;
   align-items:end;
-}
-
-.theme:hover {
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in;
-  cursor: pointer;
 }
 
 
@@ -94,15 +89,135 @@
   justify-items:center;
 }
 
-@media only screen and (max-width: 1300px) {
-  .themes-container {
-    grid-template-columns: 1fr 1fr;
+
+@media only screen and (min-width: 480px) {
+  .about-us {
+    height:1000vh;
+    width:450px;
   }
+
+  .themes-container {
+    border: none;
+    width:300px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+    height:500vh;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .theme {
+    size:30%;
+  }
+
 }
 
-@media only screen and (max-width: 800px) {
-  .themes-container {
-    grid-template-columns: 1fr;
+@media only screen and (min-width: 576px) {
+  .about-us {
+    height:1000vh;
+    width:450px;
   }
+
+  .themes-container {
+    border: none;
+    width:300px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+    height:500vh;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .theme {
+    size:30%;
+  }
+
+}
+
+@media only screen and (min-width: 360px) {
+  .about-us {
+    height:700vh;
+    width:360px;
+  }
+
+  .themes-container {
+    border: none;
+    width:270px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+    height:500vh;
+    align-items:center;
+    justify-content:center;
+    margin-left:0px;
+  }
+
+  .theme {
+    size:30%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us {
+    height:350vh;
+    width:750px;
+  }
+
+  .themes-container {
+    border: none;
+    width:700px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+    height:250vh;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .theme {
+    size:30%;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-us {
+    height:200vh;
+    width:1000px;
+  }
+
+  .themes-container {
+    border: none;
+    width:1000px;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:150vh;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .theme {
+    size:30%;
+  }
+
+}
+
+@media only screen and (min-width: 1600px) {
+  .about-us {
+    height:200vh;
+    width:1500px;
+  }
+
+  .themes-container {
+    border: none;
+    width:1500px;
+    grid-template-columns: 1fr 1fr 1fr;;
+    height:150vh;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .theme {
+    size:30%;
+  }
+
 }
 
