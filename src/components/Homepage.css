@@ -545,7 +545,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+/*@media only screen and (min-width: 1200px) {
   .BTF-container {
     width: fit-content;
     background-position:center center;
@@ -611,4 +611,4 @@
   .BTF-container button {
     width:400px;
   }
-}
+} */

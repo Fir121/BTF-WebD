@@ -67,7 +67,7 @@
     transform: rotateY(180deg);
   }
 
-  @media only screen and (min-width: 480px) {
+  /*@media only screen and (min-width: 480px) {
     .card {
       width: 180px;
       height: 180px;
@@ -125,7 +125,7 @@
       width: 200px;
       height: 200px;
     }
-  }
+  } */
 
 
   

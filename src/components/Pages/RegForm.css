@@ -547,64 +547,64 @@ tr:hover {
 @media only screen and (min-width: 480px) {
       .events-container {
         width: 240px;
-        height: 800vh;
+        height: fit-content;
       }
 
       .container {
-        height:1200vh;
+        height:fit-content;
         width:480px;
       }
 
       .tabcontent {
         width:480px;
-        height:1200vh;
+        height:fit-content;
       }
 }
 
 @media only screen and (min-width: 576px) {
       .events-container {
-        width: 240px;
-        height: 800vh;
+        width: 500px;
+        height: fit-content;
       }
 
       .container {
-        height:1200vh;
+        height:fit-content;
         width:480px;
       }
 
       .tabcontent {
         width:480px;
-        height:1200vh;
+        height:fit-content;
       }
 }
 
 @media only screen and (min-width: 360px) {
       .events-container {
         width: 240px;
-        height: 320vh;
+        height: fit-content;
       }
 
       .container {
-        height:470vh;
+        height:fit-content;
         width:360px;
       }
 
       .tabcontent {
         width:360px;
-        height:480vh;
+        height:fit-content;
         border:none;
       }
 }
 
 @media only screen and (min-width: 400px) {
       .events-container {
-        width: 400px;
-        height: 900vh;
+        width: fit-content;
+        height: fit-content;
       }
 
       .container {
         margin-top:2rem;
-        height:1100vh;
+        height:fit-content;
         width:400px;
       }
 
@@ -617,50 +617,50 @@ tr:hover {
 @media only screen and (min-width: 768px) {
       .events-container {
         width: 750px;
-        height: 250vh;
+        height: fit-content;
       }
 
       .container {
-        height:400vh;
+        height:fit-content;
         width:700px;
       }
 
       .tabcontent {
         width:700px;
-        height:450vh;
+        height:fit-content;
       }
 }
-
+/*
 @media only screen and (min-width: 1200px) {
       .events-container {
         width: 1000px;
-        height: 250vh;
+        height: fit-content;
       }
 
       .container {
-        height:150vh;;
+        height:fit-content;
         width:1000px;
       }
 
       .tabcontent {
         width:1000px;
-        height:150vh;
+        height:fit-content
       }
 }
 
 @media only screen and (min-width: 1600px) {
       .events-container {
         width: 1000px;
-        height: 200vh;
+        height: fit-content;
       }
 
       .container {
-        height:400vh;;
+        height:fit-content;
         width:1200px;
       }
 
       .tabcontent {
         width:1500px;
-        height:400vh;
+        height:fit-content;
       }
-}
+}*/
