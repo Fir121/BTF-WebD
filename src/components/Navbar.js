@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
-    const [button,setButton]=useState(true);
+    const [,setButton]=useState(true);
     const [navbar, setNavbar]=useState(false);
 
     const closeMenu = () => setClick(false)
