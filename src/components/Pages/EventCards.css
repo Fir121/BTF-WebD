@@ -72,6 +72,10 @@
       width: 180px;
       height: 180px;
     }
+
+    .card-back > p {
+      font-size: 10px;
+    }
   }
 
   @media only screen and (min-width: 576px) {
@@ -79,6 +83,7 @@
       width: 180px;
       height: 180px;
     }
+    
   }
 
   @media only screen and (min-width: 360px) {
@@ -86,12 +91,18 @@
       width: 180px;
       height: 180px;
     }
+    .card-back > p {
+      font-size: 10px;
+    }
   }
 
   @media only screen and (min-width: 400px) {
     .card {
       width: 180px;
       height: 180px;
+    }
+    .card-back > p {
+      font-size: 10px;
     }
   }
 
