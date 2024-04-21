@@ -443,7 +443,8 @@
 
 @media only screen and (min-width: 360px) {
   .BTF-container {
-    width: 360px;
+    width: 100%;
+    height:100vh;
     background-position:center center;
     background-size:cover;
   }
@@ -461,9 +462,9 @@
   }
 
   .home-container {
-    width:360px;
+    width:100%;
     background-size:cover;
-    height:300vh;
+    height:150vh;
   }
 
   .home-container > h1 {
@@ -471,13 +472,14 @@
   }
 
   .BTF-container button {
-    width:100px;
+    width:200px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 400px) {
   .BTF-container {
-    width: 750px;
+    width: 100%;
+    height:100vh;
     background-position:center center;
     background-size:cover;
   }
@@ -495,7 +497,41 @@
   }
 
   .home-container {
-    width:750px;
+    width:100%;
+    background-size:cover;
+    height:150vh;
+  }
+
+  .home-container > h1 {
+    font-size: 20px;
+  }
+
+  .BTF-container button {
+    width:200px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .BTF-container {
+    width: fit-content;
+    background-position:center center;
+    background-size:cover;
+  }
+
+  .BTF-container > h1 {
+    font-size: 50px;
+    margin-top:20px;
+    align-items:center;
+  }
+
+  .BTF-container > p {
+    font-size: 30px;
+    margin-top:20px;
+    align-items:center;
+  }
+
+  .home-container {
+    width: fit-content;
     background-size:cover;
     height:300vh;
   }
@@ -511,7 +547,7 @@
 
 @media only screen and (min-width: 1200px) {
   .BTF-container {
-    width: 1000px;
+    width: fit-content;
     background-position:center center;
     background-size:cover;
   }
@@ -529,7 +565,7 @@
   }
 
   .home-container {
-    width:1000px;
+    width:fit-content;
     background-size:cover;
     height:300vh;
   }
@@ -545,7 +581,7 @@
 
 @media only screen and (min-width: 1600px) {
   .BTF-container {
-    width: 1500px;
+    width: fit-content;
     background-position:center center;
     background-size:cover;
   }
@@ -563,7 +599,7 @@
   }
 
   .home-container {
-    width:1500px;
+    width:fit-content;
     background-size:cover;
     height:300vh;
   }

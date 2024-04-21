@@ -581,17 +581,36 @@ tr:hover {
 @media only screen and (min-width: 360px) {
       .events-container {
         width: 240px;
-        height: 800vh;
+        height: 320vh;
       }
 
       .container {
-        height:1200vh;
+        height:470vh;
         width:360px;
       }
 
       .tabcontent {
         width:360px;
-        height:1200vh;
+        height:480vh;
+        border:none;
+      }
+}
+
+@media only screen and (min-width: 400px) {
+      .events-container {
+        width: 240px;
+        height: 320vh;
+      }
+
+      .container {
+        height:470vh;
+        width:360px;
+      }
+
+      .tabcontent {
+        width:360px;
+        height:480vh;
+        border:none;
       }
 }
 

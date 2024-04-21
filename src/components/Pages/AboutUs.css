@@ -93,12 +93,12 @@
 @media only screen and (min-width: 480px) {
   .about-us {
     height:1000vh;
-    width:450px;
+    width:100%;
   }
 
   .themes-container {
     border: none;
-    width:300px;
+    width:100%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: none;
     height:500vh;
@@ -115,12 +115,12 @@
 @media only screen and (min-width: 576px) {
   .about-us {
     height:1000vh;
-    width:450px;
+    width:100%;
   }
 
   .themes-container {
     border: none;
-    width:300px;
+    width:100%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: none;
     height:500vh;
@@ -136,16 +136,41 @@
 
 @media only screen and (min-width: 360px) {
   .about-us {
-    height:700vh;
-    width:360px;
+    height:400vh;
+    width:100%;
+    text-align:Center;
   }
 
   .themes-container {
     border: none;
-    width:270px;
+    width:100%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: none;
-    height:500vh;
+    height:200vh;
+    align-items:center;
+    justify-content:center;
+    margin-left:0px;
+  }
+
+  .theme {
+    size:30%;
+  }
+
+}
+
+@media only screen and (min-width: 400px) {
+  .about-us {
+    height:350vh;
+    width:100%;
+    text-align:Center;
+  }
+
+  .themes-container {
+    border: none;
+    width:100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+    height:200vh;
     align-items:center;
     justify-content:center;
     margin-left:0px;
@@ -160,12 +185,12 @@
 @media only screen and (min-width: 768px) {
   .about-us {
     height:350vh;
-    width:750px;
+    width:100%;
   }
 
   .themes-container {
     border: none;
-    width:700px;
+    width:100%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: none;
     height:250vh;
@@ -182,12 +207,12 @@
 @media only screen and (min-width: 1200px) {
   .about-us {
     height:200vh;
-    width:1000px;
+    width:100%;
   }
 
   .themes-container {
     border: none;
-    width:1000px;
+    width:100%;
     grid-template-columns: 1fr 1fr 1fr;
     height:150vh;
     align-items:center;
@@ -203,12 +228,12 @@
 @media only screen and (min-width: 1600px) {
   .about-us {
     height:200vh;
-    width:1500px;
+    width:100%;
   }
 
   .themes-container {
     border: none;
-    width:1500px;
+    width:100%;
     grid-template-columns: 1fr 1fr 1fr;;
     height:150vh;
     align-items:center;
