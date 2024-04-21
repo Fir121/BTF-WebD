@@ -17,7 +17,6 @@ function App() {
         <Route path='/' element={ <Homepage />}></Route>
         <Route path="#reg-form" element={ <BTFRegistration />}></Route>
         <Route path="#about-us" element={<AboutUs />} />
-        <Route path="#events" element={<Cards />} />
         </Routes> 
         <Footer />
       </Router>

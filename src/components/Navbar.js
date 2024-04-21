@@ -52,7 +52,7 @@ const Navbar = () => {
                         <a href='/' onClick={closeMenu}>Home</a>
                     </li>
                     <li className='nav-links'>
-                        <a href='#reg-form' onClick={closeMenu}>Register</a>
+                        <a href="#reg-form" onClick={closeMenu}>Register</a>
                     </li>
                     <li className='nav-links'>
                         <a href='#about-us' onClick={closeMenu}>About Us</a>

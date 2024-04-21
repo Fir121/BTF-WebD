@@ -159,7 +159,6 @@ const BTFRegistration = () => {
   }, []);
 
   return (
-    <>
     <div id='reg-form'>
       <h2>Register Now!</h2>
       <p> Technofest is our exclusive tech festival for the next generation of engineers. If you are an aspiring engineer, come on over and show off your skills at Technofest 2024.</p> <br/>
@@ -188,7 +187,6 @@ const BTFRegistration = () => {
         </span>
         {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
         <form
-          id="reg-form"
           className="container m-4 pl-4"
           onSubmit={(event) => handleSubmit(event, "Enginuity")}
         >
@@ -537,7 +535,6 @@ const BTFRegistration = () => {
         </span>
         {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
         <form
-          id="reg-form"
           className="container m-4 pl-4"
           onSubmit={(event) => handleSubmit(event, "Technofest")}
         >
@@ -874,7 +871,6 @@ const BTFRegistration = () => {
       </div>
 
     </div>
-    </>
   );
 };
 
