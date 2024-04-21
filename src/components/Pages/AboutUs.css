@@ -49,14 +49,17 @@
 }
 
 .themes-container {
-  width: 70vw;
-  height: auto;
+  width: 90%;
+  padding:3rem;
+  height: 90vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid white;
+  margin-left:5rem;
+  border-radius: 34px;
+  grid-template-columns:1fr 1fr 1fr;
   place-items: center;
-  align-items:center;
-  position: absolute;
-  margin-left: 12.5rem;
+  align-self:center;
+  position:absolute;
 }
 
 .theme {

@@ -17,9 +17,8 @@ function App() {
         <Routes>
         <Route path='/' exact element={ <Homepage />}></Route>
         <Route path='/home' exact element={ <Homepage />}></Route>
-        <Route path='/reg-form' exact element={ <BTFRegistration />}></Route>
+        <Route path="/reg-form" exact element={ <BTFRegistration />}></Route>
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/events" element={<Cards />} />
         </Routes> 
         <Footer />
       </Router>
