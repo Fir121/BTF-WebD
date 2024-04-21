@@ -4,7 +4,6 @@ import './Homepage.css';
 import Empower from '../components/img-6.jpg';
 import Engage from '../components/img-7.jpg';
 import Excel from '../components/img-8.jpg';
-import Cards from '../components/Cards';
 import AboutUs from '../components/Pages/AboutUs';
 import BTFRegistration from '../components/Pages/BTFRegistration';
 

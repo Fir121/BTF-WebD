@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import BTFRegistration from './components/Pages/BTFRegistration.js';
 import Footer from './components/Footer.js';
 import AboutUs from './components/Pages/AboutUs';
-import Cards from './components/Cards.js';
 
 
 function App() {
