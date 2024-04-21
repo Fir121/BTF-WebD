@@ -10,13 +10,16 @@ const BTFRegistration = () => {
   const [showJoinTeamModal, setShowJoinTeamModal] = useState(false);
   */
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event, tabName) => {
     event.preventDefault();
-    document.getElementById("message").textContent = " Submitting..";
-    document.getElementById("message").style.display = "block";    
-    document.getElementById("message").style.backgroundColor = "white";
-    document.getElementById("message").style.color = "black";
-    document.getElementById("submit-button").disabled = true;
+    const messageElement = document.getElementById(`message-${tabName}`);
+    const submitButton = document.getElementById(`submit-button-${tabName}`);
+
+    messageElement.textContent = " Submitting..";
+    messageElement.style.display = "block";    
+    messageElement.style.backgroundColor = "white";
+    messageElement.style.color = "black";
+    submitButton.disabled = true;
 
     // Collect the form data
     var formData = new FormData(event.target);
@@ -46,17 +49,17 @@ const BTFRegistration = () => {
       })
       .then(function (data) {
         // Display a success message
-        document.getElementById("message").textContent =
-          " Data submitted successfully!";
-        document.getElementById("message").style.display = "block";
-        document.getElementById("message").style.backgroundColor = "green";
-        document.getElementById("message").style.color = "beige";
-        document.getElementById("submit-button").disabled = false;
+        messageElement.textContent = " Data submitted successfully!";
+        messageElement.style.display = "block";
+        messageElement.style.backgroundColor = "green";
+        messageElement.style.color = "beige";
+        submitButton.disabled = false;
         event.target.reset();
 
         setTimeout(function () {
-          document.getElementById("message").textContent = "";
-          document.getElementById("message").style.display = "none";
+          messageElement.textContent = "";
+          messageElement.style.display = "none";
+          document.getElementById(tabName).style.display = "none";
         }, 2600);
 
         //setFormSubmitted(true);
@@ -66,18 +69,18 @@ const BTFRegistration = () => {
       .catch(function (error) {
         // Handle errors, you can display an error message here
         console.error(error);
-        document.getElementById("message").textContent =
+        messageElement.textContent =
           "An error occurred while submitting the form: " + error;
-        document.getElementById("message").style.display = "block";                     
-        document.getElementById("message").style.backgroundColor = "white";
-        document.getElementById("message").style.color = "red";
+        messageElement.style.display = "block";                     
+        messageElement.style.backgroundColor = "white";
+        messageElement.style.color = "red";
       });
+  };
 
-      const handleNameInput = (event) => {
-        const inputValue = event.target.value;
-        const sanitizedValue = inputValue.replace(/[^A-Za-z\s]/g, "");
-        event.target.value = sanitizedValue;
-      };
+  const handleNameInput = (event) => {
+    const inputValue = event.target.value;
+    const sanitizedValue = inputValue.replace(/[^A-Za-z\s]/g, "");
+    event.target.value = sanitizedValue;
   };
 
   /*
@@ -144,6 +147,7 @@ const BTFRegistration = () => {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   };
+
   useEffect(() => {
     const closeButtons = document.getElementsByClassName("topright");
     for (let i = 0; i < closeButtons.length; i++) {
@@ -181,7 +185,7 @@ const BTFRegistration = () => {
         <form
           id="reg-form"
           className="container m-4 pl-4"
-          onSubmit={handleSubmit}
+          onSubmit={(event) => handleSubmit(event, "Enginuity")}
         >
           <h3>Enginuity (for Universities) Registration Form</h3>
           <div className="field">
@@ -386,7 +390,7 @@ const BTFRegistration = () => {
               <button
                 className="button is-primary"
                 type="submit"
-                id="submit-button"
+                id="submit-button-Enginuity"
               >
                 Sign Up
               </button>
@@ -394,12 +398,12 @@ const BTFRegistration = () => {
           </div>
         </form>
 
-        <div id="message" style={{ display: "none" }}></div>
+        <div id="message-Enginuity" style={{ display: "none" }}></div>
       </div>
 
       <div id="Technofest" className="tabcontent">
         <span
-          id="closeEnginuity"
+          id="closeTechnofest"
           class="topright"
         >
           &times;
@@ -408,7 +412,7 @@ const BTFRegistration = () => {
         <form
           id="reg-form"
           className="container m-4 pl-4"
-          onSubmit={handleSubmit}
+          onSubmit={(event) => handleSubmit(event, "Technofest")}
         >
           <h3>Technofest (for Schools) Registration Form</h3>
           <div className="field">
@@ -590,7 +594,7 @@ const BTFRegistration = () => {
               <button
                 className="button is-primary"
                 type="submit"
-                id="submit-button"
+                id="submit-button-Technofest"
               >
                 Sign Up
               </button>
@@ -598,7 +602,7 @@ const BTFRegistration = () => {
           </div>
         </form>
 
-        <div id="message" style={{ display: "none" }}></div>
+        <div id="message-Technofest" style={{ display: "none" }}></div>
       </div>
 
     </div>
