@@ -6,6 +6,7 @@ import Engage from '../components/img-7.jpg';
 import Excel from '../components/img-8.jpg';
 import AboutUs from '../components/Pages/AboutUs';
 import BTFRegistration from '../components/Pages/BTFRegistration';
+import Title from './images/Title.png';
 
 
 function Homepage() {
@@ -13,9 +14,20 @@ function Homepage() {
     <>
      <div className='home'>
       <div className='BTF-container'>
-       <h1> Welcome to BITS Tech Fest 2024! </h1>
+       <div className='title'><img src={Title} /></div>
+        <div class="text-container">
+         <div class="container-content">
+          <div class="content__container">
+            <ul class="content__container__list">
+              <li class="content__container__list__item">Empower</li>
+              <li class="content__container__list__item">Engage</li>
+              <li class="content__container__list__item">Excel</li>
+            </ul>
+          </div>
+         </div>  
+        </div>
        <p> The UAE's largest Tech Festival </p> <br/>
-       <p> May 1 and 2, 2024 </p>
+       <p> May 1 and 2, 2024 </p> <br/>
        <button class="btn" type="button">
          <a href="#reg-form">SIGN UP!</a>
           <div id="container-stars">
@@ -27,18 +39,6 @@ function Homepage() {
             <div class="circle"></div>
            </div>
        </button>
-      </div>
-      
-      <div className='home-container'>
-       <div className='left' style={{ backgroundImage: `url(${Empower})` }}>
-        <h1> <br/>E<br/>M<br/>P<br/>O<br/>W<br/>E<br/>R </h1>
-       </div>
-       <div className='center' style={{ backgroundImage: `url(${Engage})` }}>
-        <h1> E<br/>N<br/>G<br/>A<br/>G<br/>E <br/> </h1>
-       </div>
-       <div className='right' style={{ backgroundImage: `url(${Excel})` }}>
-        <h1> <br/>E<br/>X<br/>C<br/>E<br/>L<br/> <br/> </h1>
-       </div>
       </div>
       
       <div id="reg-form">

@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
-import Img from './aboutus.jpg';
+import Img from '../images/3.jpg';
 import icon1 from '../themes-icons/hacker.png';
 import icon2 from '../themes-icons/earth.png';
 import icon3 from '../themes-icons/AI.png';
@@ -16,14 +16,17 @@ const AboutUs = () => {
         <h2>Themes for BTF 2024</h2>
         <div className='themes-container'>
          <div className='theme' style={{ backgroundImage: `url(${icon1})` }}>
-          <p> Cyber Resilience – Beyond Cyber Security </p>
+          
          </div>
+         <p> Cyber Resilience – Beyond Cyber Security </p>
          <div className='theme' style={{ backgroundImage: `url(${icon2})` }}> 
-          <p>Sustainable Practices for Energy and Climate Change</p>
+          
          </div>
+         <p>Sustainable Practices for Energy and Climate Change</p>
          <div className='theme' style={{ backgroundImage: `url(${icon3})` }}>
-          <p> Artificial intelligence as a Driving Force for the Economy & Society</p>
+          
          </div>
+         <p> Artificial intelligence as a Driving Force for the Economy & Society</p>
         </div>
         
      </div>
