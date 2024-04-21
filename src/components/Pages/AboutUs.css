@@ -160,7 +160,7 @@
 
 @media only screen and (min-width: 400px) {
   .about-us {
-    height:350vh;
+    height:800vh;
     width:100%;
     text-align:Center;
   }
@@ -170,14 +170,14 @@
     width:100%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: none;
-    height:200vh;
+    height:400vh;
     align-items:center;
     justify-content:center;
     margin-left:0px;
   }
 
   .theme {
-    size:30%;
+    size:10%;
   }
 
 }

@@ -598,18 +598,18 @@ tr:hover {
 
 @media only screen and (min-width: 400px) {
       .events-container {
-        width: 240px;
-        height: 320vh;
+        width: 400px;
+        height: 900vh;
       }
 
       .container {
-        height:470vh;
-        width:360px;
+        margin-top:2rem;
+        height:1100vh;
+        width:400px;
       }
 
       .tabcontent {
-        width:360px;
-        height:480vh;
+        height:1120vh;
         border:none;
       }
 }
