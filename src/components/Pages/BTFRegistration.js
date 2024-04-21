@@ -685,7 +685,7 @@ const BTFRegistration = () => {
               />
             </div>
           </div>
-          <div className="field">
+          <div className="events-container">
             <label className="label">Which event(s) would you like to register for? Hover over an event to learn more.</label>
             <div className="control">
             <label className="checkbox">
