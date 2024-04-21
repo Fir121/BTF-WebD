@@ -372,7 +372,7 @@
        font-display: swap;
        font-style: normal;
 }
-
+/*
 @media only screen and (min-width: 480px) {
   .BTF-container {
     width: 480px;
@@ -545,7 +545,7 @@
   }
 }
 
-/*@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .BTF-container {
     width: fit-content;
     background-position:center center;
