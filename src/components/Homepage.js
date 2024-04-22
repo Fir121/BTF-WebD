@@ -11,7 +11,7 @@ function Homepage() {
     <>
      <div className='home'>
       <div className='BTF-container'>
-       <div className='title'><img src={Title} /></div>
+       <div className='title'><img src={Title} alt='homepage'/></div>
         <div className="text-container">
          <div className="container-content">
           <div className="content__container">
