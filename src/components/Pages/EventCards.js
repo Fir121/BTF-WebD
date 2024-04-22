@@ -3,9 +3,9 @@ import './EventCards.css';
 
 function EventCards(props) {
   return (
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
+    <div className="card">
+      <div className="card-inner">
+        <div className="card-front">
           <figure data-category={props.label}>
             <img
               className='event-card-img'
@@ -16,7 +16,7 @@ function EventCards(props) {
           </figure>
           
         </div>
-        <div class="card-back">
+        <div className="card-back">
           <div className='event-info'>
             <h5 className='event-card-text'>{props.text}</h5>
           </div>
