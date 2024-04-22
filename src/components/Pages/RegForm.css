@@ -545,7 +545,7 @@ tr:hover {
       font-style: normal;
 }
 
-@media only screen and (min-width: 480px) {
+/*@media only screen and (min-width: 480px) {
       .events-container {
         width: 240px;
         height: fit-content;

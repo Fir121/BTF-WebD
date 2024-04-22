@@ -207,7 +207,7 @@ const BTFRegistration = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">University Name</label>
+            {/*<label className="label">University Name</label>
             <div className="control">
               <div className="select">
                 <select name="Institution">
@@ -217,7 +217,14 @@ const BTFRegistration = () => {
                   <option value="Amity">Amity</option>
                 </select>
               </div>
-            </div>
+  </div>*/}
+            <label className="label">University Name</label>
+            <input type="institute" id="institute-name" list="universities" />
+            <datalist id="universities">
+              <option value="BITS"></option>
+              <option value="Amity"></option>
+              <option value="Manipal"></option>
+            </datalist>
           </div>
           <div className="field">
             <label className="label">Student-ID</label>
@@ -555,7 +562,7 @@ const BTFRegistration = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">School Name</label>
+            {/*<label className="label">School Name</label>
             <div className="control">
               <div className="select">
                 <select name="Institution">
@@ -565,7 +572,14 @@ const BTFRegistration = () => {
                   <option value="DPS">DPS</option>
                 </select>
               </div>
-            </div>
+              </div> */}
+            <label className="label">School Name</label>
+             <input type="institute" id="institute-name" list="schools" />
+             <datalist id="schools">
+              <option value="DPS"></option>
+              <option value="IHS"></option>
+              <option value="GEMS"></option>
+            </datalist>
           </div>
           <div className="field">
             <label className="label">Student-ID</label>
