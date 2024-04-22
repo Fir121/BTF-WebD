@@ -49,6 +49,7 @@ const BTFRegistration = () => {
         }
       })
       .then(function (data) {
+        localStorage.setItem("registered_BTF", "1");
         // Display a success message
         messageElement.textContent = " Data submitted successfully!";
         messageElement.style.display = "block";
@@ -136,6 +137,13 @@ const BTFRegistration = () => {
   */
 
   const openTab = (evt, tabName) => {
+
+    const didRegister = localStorage.getItem("registered_BTF");
+    if (didRegister==="1") {
+      console.log("can't register!");
+      alert("You have already registered for BTF!");
+      return;
+    }
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -181,7 +189,7 @@ const BTFRegistration = () => {
       <div id="Enginuity" className="tabcontent">
         <span
           id="closeEnginuity"
-          class="topright"
+          className="topright"
         >
           &times;
         </span>
@@ -536,7 +544,7 @@ const BTFRegistration = () => {
       <div id="Technofest" className="tabcontent">
         <span
           id="closeTechnofest"
-          class="topright"
+          className="topright"
         >
           &times;
         </span>
