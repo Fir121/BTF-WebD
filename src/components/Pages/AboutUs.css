@@ -65,7 +65,7 @@
   background-attachment:scroll; 
   border-radius: 15px;
   width:300px;
-  transform: scale(0.75);
+  transform: scale(0.5);
   filter: brightness(0) invert(1);
   height:320px;
   align-items:end;

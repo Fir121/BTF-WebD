@@ -10,7 +10,7 @@
      --bg-color: #fff;
      --main-color: #323232;
      position: relative;
-     width: fit-content;
+     width: 300px;
      padding-top:0.5rem;
      padding-left:0.5rem;
      padding-right:0.5rem;
@@ -27,7 +27,7 @@
 /* Style the buttons inside the tab */
 .tab button {
     font-size: 17px;
-    width: 100px;
+    width: 150px;
     position:sticky;
     background-color: var(--bg-color);
     border-radius: 50px;
