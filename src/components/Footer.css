@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:98%;
+    width:100%;
   }
 
 
@@ -25,7 +25,7 @@
     align-items: flex-end;
     text-decoration: none;
     font-family:'ClashDisplay-Regular';
-    margin-left: 35rem;
+    margin-left: 25rem;
     font-size: 15px;
     justify-self:end;
     width: 200px;
