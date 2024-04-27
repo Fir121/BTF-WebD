@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import './Homepage.css';
-import AboutUs from '../components/Pages/AboutUs';
+//import AboutUs from '../components/Pages/AboutUs';
 import BTFRegistration from '../components/Pages/BTFRegistration';
 import Title from './images/Title.png';
 
