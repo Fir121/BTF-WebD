@@ -217,9 +217,9 @@ img {
 }
 
 .BTF-container > p {
-  margin-top: 8px;
+  margin-top: 1em;
   color: #ffff;
-  font-size: 35px;    
+  font-size: 1em;    
   font-family: 'ClashDisplay-Medium';
 }
 
