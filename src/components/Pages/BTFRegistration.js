@@ -200,7 +200,7 @@ const BTFRegistration = () => {
   }, []);
 
   return (
-    <div id='reg-form'>
+    <div id="reg-form">
       <h2>Registration</h2>
       {/* <p> Technofest is our exclusive tech festival for the next generation of engineers. If you are an aspiring engineer, come on over and show off your skills at Technofest 2024.</p> <br/>
       <p> Enginuity is an exclusive tech festival for university students.</p> <br/> */}

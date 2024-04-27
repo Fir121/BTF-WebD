@@ -1,73 +1,61 @@
-import React, { useState, useEffect } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import logo from './logo2-removebg.png'
-import logo3 from './BPDC Logo png.png'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { FaTimes, FaBars } from 'react-icons/fa';
+import logo3 from './BPDC Logo png.png';
+import logo from './logo2-removebg.png';
 import './Navbar.css'
- 
 
-const Navbar = () => {
+function Navbar() {
+    const [click, setClick] = useState(false);
+    const [navbar, setNavbar] = useState(false);
 
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click)
-    const [,setButton]=useState(true);
-    const [navbar, setNavbar]=useState(false);
-
-    const closeMenu = () => setClick(false)
-    const showButton = () => {
-        if(window.innerWidth<=960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
-
-    useEffect(() => {
-        showButton();
-      }, []);
-    
-    window.addEventListener('resize', showButton);
+    const handleClick = () => setClick(!click);
+    const closeMenu = () => setClick(false);
 
     const changeBackground = () => {
-        if(window.scrollY >= 200) {
+        if (window.scrollY >= 80) {
             setNavbar(true);
         } else {
             setNavbar(false);
         }
-    }
+    };
 
-    window.addEventListener('scroll',changeBackground);
+    useEffect(() => {
+        window.addEventListener('scroll', changeBackground);
+    
+        // Cleanup function
+        return () => {
+            window.removeEventListener('scroll', changeBackground);
+        };
+    }, []);
 
     return (
         <div className={navbar ? 'navbar active' : 'navbar'}>
             <nav className='navbar-container'>
-                <a href='/' className='navbar-logo'>
+                <Link to="home" smooth={true} className='navbar-logo'>
                     <img src={logo} alt='logo' width="40" height="40" className="d-inline-block align-top"/>
-                </a>
+                </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
                         : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className='nav-links'>
-                        <a href='/' onClick={closeMenu}>Home</a>
+                        <Link to="home" smooth={true} onClick={closeMenu}>Home</Link>
                     </li>
                     <li className='nav-links'>
-                        <a href="#reg-form" onClick={closeMenu}>Register</a>
+                        <Link to="reg-form" smooth={true} onClick={closeMenu}>Register</Link>
                     </li>
                     <li className='nav-links'>
-                        <a href='#about-us' onClick={closeMenu}>About Us</a>
+                        <Link to="about-us" smooth={true} onClick={closeMenu}>About Us</Link>
                     </li>
                 </ul>
-                <a href='/' className='end-logo'>
+                <Link to="home" smooth={true} className='end-logo'>
                     <img src={logo3} alt='logo' width="40" height="40" className="d-inline-block align-top"/>
-                </a>
-                   
+                </Link>
             </nav>
         </div>
-    )
+    );
 }
 
-
-
-
-export default Navbar
+export default Navbar;

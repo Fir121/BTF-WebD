@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import { Link } from 'react-scroll';
 import './Homepage.css';
 //import AboutUs from '../components/Pages/AboutUs';
 import BTFRegistration from '../components/Pages/BTFRegistration';
@@ -26,7 +27,7 @@ function Homepage() {
        {/* <p> The UAE's largest Technology Festival</p> <br/> */}
        <p>1-2, May 2024</p> <br/>
        <button className="btn" type="button">
-          <a href="#reg-form">Register</a>
+          <Link to="reg-form" smooth={true} >Register</Link>
           <div id="container-stars">
            <div id="stars"></div>
            </div>

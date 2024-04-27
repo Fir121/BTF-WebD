@@ -19,15 +19,15 @@ const AboutUs = () => {
         <div className='themes-container'>
 
           <figure className='theme'>
-            <img src={icon1} />
-            <p> Cyber Resilience – Beyond Cyber Security  </p>
+            <img src={icon1} alt='Cyber Resilience - Beyond Cyber Security'/>
+            <p> Cyber Resilience - Beyond Cyber Security  </p>
           </figure>
           <figure className='theme'>
-            <img src={icon2} />
+            <img src={icon2} alt='Sustainable Practices for Energy and Climate Change'/>
             <p> Sustainable Practices for Energy and Climate Change </p>
           </figure>
           <figure className='theme'>
-            <img src={icon3} />
+            <img src={icon3} alt='Artificial intelligence as a Driving Force for the Economy & Society'/>
             <p> Artificial intelligence as a Driving Force for the Economy & Society </p>
           </figure>
         </div>
