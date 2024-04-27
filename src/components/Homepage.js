@@ -25,8 +25,8 @@ function Homepage() {
         </div>
        {/* <p> The UAE's largest Technology Festival</p> <br/> */}
        <p>1-2, May 2024</p> <br/>
-       <button className="btn" type="button">
-          <a href="#reg-form">Register</a>
+       <button className="btn" type="button" onClick={()=>window.location.hash="#reg-form"}>
+          <a>Register</a>
           <div id="container-stars">
            <div id="stars"></div>
            </div>
