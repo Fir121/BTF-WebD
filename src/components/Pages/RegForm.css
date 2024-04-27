@@ -725,6 +725,12 @@ td {
       margin-bottom: 1em;
 }
 
+@media screen and (max-width: 768px){
+      .events_container {
+            font-size: 1em;
+      }
+}
+
 /* td a img {
       margin: auto;
       width: 100%;
