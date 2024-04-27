@@ -1,4 +1,7 @@
-
+img {
+  height: auto;
+  max-width: 100% !important;
+}
 
 .home-container {
   background-size:cover;
@@ -48,9 +51,10 @@
 .btn > a {
   z-index: 2;
   font-family: 'ClashDisplay-Bold';
-  font-size: 15px;
-  letter-spacing: 5px;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
   color: #FFFF;
+  text-decoration: none;
 }
 
 
@@ -237,7 +241,8 @@
 }
 
 .title {
-  width:600px;
+  width: 80%;
+  max-width: 600px;
   height:200px;
   padding-top:70px;
 }

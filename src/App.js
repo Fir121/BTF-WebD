@@ -12,11 +12,11 @@ function App() {
    return (
     <>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
         <Route path='/' element={ <Homepage />}></Route>
         <Route path="#reg-form" element={ <BTFRegistration />}></Route>
-        <Route path="#about-us" element={<AboutUs />} />
+        {/* <Route path="#about-us" element={<AboutUs />} /> */}
         </Routes> 
         <Footer />
       </Router>

@@ -23,10 +23,10 @@ function Homepage() {
           </div>
          </div>  
         </div>
-       <p> The UAE's largest Tech Festival </p> <br/>
-       <p> May 1 and 2, 2024 </p> <br/>
+       {/* <p> The UAE's largest Technology Festival</p> <br/> */}
+       <p>1-2, May 2024</p> <br/>
        <button className="btn" type="button">
-         <a href="#reg-form">SIGN UP!</a>
+          <a href="#reg-form">Register</a>
           <div id="container-stars">
            <div id="stars"></div>
            </div>
@@ -38,12 +38,10 @@ function Homepage() {
        </button>
       </div>
       
-      <div id="reg-form">
-       <BTFRegistration />
-      </div>
-      <div id='about-us'>
+      <BTFRegistration />
+      {/* <div id='about-us'>
        <AboutUs/>
-      </div>
+      </div> */}
      </div>
     </>
   );

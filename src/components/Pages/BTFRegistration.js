@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./RegForm.css";
 import EventCards from './EventCards.js';
-const API_LINK =
-  "https://script.google.com/macros/s/AKfycbx0W50mPE7jEUkQu2jQcJGZG_QLcR1vwdqllRoMu-H2dM-NNrBqWdB13_owEjxGyaJ6zA/exec";
+const GSHEETS_API_LINK =
+  "https://script.google.com/macros/s/AKfycby8vPh7UnHj6H632aWQaZm0Giw9so8ZaKVQ5XSqDiHXWdMLk42kkVWAZr7NrlEXa_QN-g/exec";
 
 const BTFRegistration = () => {
   /*const [showIndividualModal, setShowIndividualModal] = useState(false);
@@ -14,12 +14,14 @@ const BTFRegistration = () => {
   const handleSubmit = (event, tabName) => {
     event.preventDefault();
     const messageElement = document.getElementById(`message-${tabName}`);
-    const submitButton = document.getElementById(`submit-button-${tabName}`);
+    const messageElement_text = messageElement.querySelector("p");
 
-    messageElement.textContent = " Submitting..";
-    messageElement.style.display = "block";    
-    messageElement.style.backgroundColor = "white";
-    messageElement.style.color = "black";
+    const submitButton = document.getElementById(`submit-button-${tabName}`);
+    
+    messageElement.style.display = "block";
+    messageElement_text.textContent = "Registering...";
+    messageElement_text.style.backgroundColor = "white";
+    messageElement_text.style.color = "black";
     submitButton.disabled = true;
 
     // Collect the form data
@@ -32,7 +34,7 @@ const BTFRegistration = () => {
     var formDataString = keyValuePairs.join("&");
 
     // Send a POST request to your Google Apps Script
-    fetch(API_LINK, {
+    fetch(GSHEETS_API_LINK, {
       redirect: "follow",
       method: "POST",
       body: formDataString,
@@ -49,20 +51,32 @@ const BTFRegistration = () => {
         }
       })
       .then(function (data) {
-        localStorage.setItem("registered_BTF", "1");
+        // localStorage.setItem("registered_BTF", "1");
         // Display a success message
-        messageElement.textContent = " Data submitted successfully!";
+  
+        let name = "Thahir";
+        let institute = "BITS";
+        messageElement.querySelector("img").src = "https://btf.pythonanywhere.com/badge-going?n=" + name + "&i=" + institute;
+  
+        messageElement_text.innerHTML = "Your registration was successful!<br/>Here's your badge! 👇";
+        messageElement_text.style.backgroundColor = "green";
+        messageElement_text.style.color = "beige";
+        
         messageElement.style.display = "block";
-        messageElement.style.backgroundColor = "green";
-        messageElement.style.color = "beige";
+        let rect = messageElement.querySelector("img").getBoundingClientRect();
+        window.scrollTo(
+          0,
+          rect.bottom
+        )
+
         submitButton.disabled = false;
         event.target.reset();
 
-        setTimeout(function () {
-          messageElement.textContent = "";
-          messageElement.style.display = "none";
-          document.getElementById(tabName).style.display = "none";
-        }, 2600);
+        // setTimeout(function () {
+        //   messageElement.textContent = "";
+        //   messageElement.style.display = "none";
+        //   // document.getElementById(tabName).style.display = "none";
+        // }, 2600);
 
         //setFormSubmitted(true);
         //url = "https://btf.pythonanywhere.com/send-registration-confirmation?n=" + data["Name"].replace(" ", "+") + "&i=" + data["Institution"].replace(" ", "+") + "&e=" + data["Email"].replace(" ", "");
@@ -71,9 +85,9 @@ const BTFRegistration = () => {
       .catch(function (error) {
         // Handle errors, you can display an error message here
         console.error(error);
-        messageElement.textContent =
+        messageElement_text.textContent =
           "An error occurred while submitting the form: " + error;
-        messageElement.style.display = "block";                     
+        messageElement.style.display = "block";
         messageElement.style.backgroundColor = "white";
         messageElement.style.color = "red";
       });
@@ -138,12 +152,12 @@ const BTFRegistration = () => {
 
   const openTab = (evt, tabName) => {
 
-    const didRegister = localStorage.getItem("registered_BTF");
-    if (didRegister==="1") {
-      console.log("can't register!");
-      alert("You have already registered for BTF!");
-      return;
-    }
+    // const didRegister = localStorage.getItem("registered_BTF");
+    // if (didRegister === "1") {
+    //   console.log("can't register!");
+    //   alert("You have already registered for BTF!");
+    //   return;
+    // }
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -168,39 +182,39 @@ const BTFRegistration = () => {
 
   return (
     <div id='reg-form'>
-      <h2>Register Now!</h2>
-      <p> Technofest is our exclusive tech festival for the next generation of engineers. If you are an aspiring engineer, come on over and show off your skills at Technofest 2024.</p> <br/>
-      <p> Enginuity is an exclusive tech festival for college students. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. </p> <br/>
-      <p> Register now! </p> <br/>
+      {/* <h2>Register Now!</h2> */}
+      {/* <p> Technofest is our exclusive tech festival for the next generation of engineers. If you are an aspiring engineer, come on over and show off your skills at Technofest 2024.</p> <br/>
+      <p> Enginuity is an exclusive tech festival for university students.</p> <br/> */}
+      {/* <p> Register now! </p> <br/> */}
       <div className="tab">
-        <button
-          className="tablinks"
-          onClick={(evt) => openTab(evt, "Enginuity")}
-        >
-          Enginuity
-        </button>
         <button
           className="tablinks"
           onClick={(evt) => openTab(evt, "Technofest")}
         >
-          Technofest
+          School
+        </button>
+        <button
+          className="tablinks"
+          onClick={(evt) => openTab(evt, "Enginuity")}
+        >
+          University
         </button>
       </div>
       <div id="Enginuity" className="tabcontent">
-        <span
+        {/* <span
           id="closeEnginuity"
           className="topright"
         >
           &times;
-        </span>
+        </span> */}
         {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
         <form
           className="container m-4 pl-4"
           onSubmit={(event) => handleSubmit(event, "Enginuity")}
         >
-          <h2>Enginuity (for Universities) Registration Form</h2>
+          <h2>Enginuity</h2>
+          {/* <p>May 2nd, 2024</p> */}
           <div className="field">
-            <label className="label">Name</label>
             <div className="control">
               <input
                 className="input"
@@ -215,123 +229,29 @@ const BTFRegistration = () => {
             </div>
           </div>
           <div className="field">
-            {/*<label className="label">University Name</label>
             <div className="control">
-              <div className="select">
-                <select name="Institution">
-                  <option value="">Select an option</option>
-                  <option value="BITS">BITS</option>
-                  <option value="Manipal">Manipal</option>
-                  <option value="Amity">Amity</option>
-                </select>
-              </div>
-  </div>*/}
-            <label className="label">University Name</label>
-            <input type="institute" id="institute-name" list="universities" />
-            <datalist id="universities">
-              <option value="BITS"></option>
-              <option value="Amity"></option>
-              <option value="Manipal"></option>
-            </datalist>
-          </div>
-          <div className="field">
-            <label className="label">Student-ID</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                placeholder="Student-ID"
-                name="Student-ID"
-              />
+              <input className="input" type="text" name="Institute" list="universities" placeholder="University" required />
+              <datalist id="universities">
+                <option value="BITS"></option>
+                <option value="Amity"></option>
+                <option value="Manipal"></option>
+              </datalist>
             </div>
           </div>
           <div className="field">
-            <label className="label">Emirates-ID</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                placeholder="Enter valid Emirates ID"
-                name="Emirates-ID"
-                maxLength="18"
-                onKeyDown={(event) => {
-                  const input = event.target;
-                  const key = event.key;
-                  const value = input.value;
-                  const selectionStart = input.selectionStart;
-
-                  if (key === "Backspace") {
-                    if (value[selectionStart - 1] === "-") {
-                      event.preventDefault();
-                      input.value =
-                        value.slice(0, selectionStart - 1) +
-                        value.slice(selectionStart);
-                      input.setSelectionRange(
-                        selectionStart - 1,
-                        selectionStart - 1
-                      );
-                    }
-                  }
-                }}
-                onInput={(event) => {
-                  const input = event.target;
-                  let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
-                  const groups = [3, 4, 7, 4]; // Digit groups for formatting
-
-                  let formattedValue = "";
-                  let startIndex = 0;
-
-                  for (let i = 0; i < groups.length; i++) {
-                    if (value.length > startIndex) {
-                      if (i > 0) {
-                        formattedValue += "-";
-                      }
-                      formattedValue += value.substr(startIndex, groups[i]);
-                      startIndex += groups[i];
-                    } else {
-                      break;
-                    }
-                  }
-
-                  input.value = formattedValue;
-                }}
-                required
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Year</label>
-            <div className="control">
-              <input
-                className="input"
-                type="number"
-                onInput={(event) => {
-                  if (event.target.value.length > event.target.maxLength) {
-                    event.target.value = event.target.value.slice(
-                      0,
-                      event.target.maxLength
-                    );
-                  }
-                }}
-                placeholder="Year"
-                name="Year"
-                maxLength="1"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Email</label>
+            {/* <label className="label">Email</label> */}
             <div className="control">
               <input
                 className="input"
                 type="email"
                 placeholder="Email"
                 name="Email"
+                required
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">Mobile Number</label>
+            {/* <label className="label">Mobile Number</label> */}
             <div className="control">
               <input
                 className="input"
@@ -344,224 +264,53 @@ const BTFRegistration = () => {
                     );
                   }
                 }}
-                placeholder="10 digit Number"
-                name="Mobile Number"
+                placeholder="Mobile Number (0501234567)"
+                name="Mobile"
                 maxLength="10"
+                required
               />
             </div>
           </div>
-          <div className="events-container">
-            <label className="label">Which event(s) would you like to register for? Hover over an event to learn more.</label>
-            <div className="control">
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 1"
-                  /*onChange={(event) => {
-                  if (event.target.checked) {
-                    openModal("team");
-                  }
-                }}*/
-                />
-                 <EventCards 
-                   src='./images/variant2.png'
-                   eventName='event1'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='1'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 2"
-                />
-                <EventCards 
-                   src='images/event2.jpg'
-                   eventName='event2'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='2'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 3"
-                />
-                <EventCards 
-                   src='images/event3.jpg'
-                   eventName='event3'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='3'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 4"
-                />
-                <EventCards 
-                   src='images/event4.jpg'
-                   eventName='event4'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='4'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 5"
-                />
-                <EventCards 
-                   src='images/event5.jpg'
-                   eventName='event5'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='5'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 6"
-                />
-                <EventCards 
-                   src='images/event6.jpg'
-                   eventName='event6'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='6'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 7"
-                />
-                <EventCards 
-                   src='images/event7.jpg'
-                   eventName='event7'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='7'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 8"
-                />
-                <EventCards 
-                   src='images/event8.jpg'
-                   eventName='event8'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='8'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 9"
-                />
-                <EventCards 
-                   src='images/event1.jpg'
-                   eventName='event9'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='9'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 10"
-                />
-                <EventCards 
-                   src='images/event2.jpg'
-                   eventName='event10'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='10'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 11"
-                />
-                <EventCards 
-                   src='images/event3.jpg'
-                   eventName='event11'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='11'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 12"
-                />
-                <EventCards 
-                   src='images/event4.jpg'
-                   eventName='event12'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='12'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 13"
-                />
-                <EventCards 
-                   src='images/event5.jpg'
-                   eventName='event13'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='13'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 14"
-                />
-                <EventCards 
-                   src='images/event6.jpg'
-                   eventName='event14'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='14'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 15"
-                />
-                <EventCards 
-                   src='images/event7.jpg'
-                   eventName='event15'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='15'/>
-              </label>
-            </div>
-          </div>
-          <div className="field is-grouped">
+          <div className="field is-grouped submit">
             <div className="control">
               <button
                 className="sign-up-button"
                 type="submit"
                 id="submit-button-Enginuity"
               >
-                Sign Up
+                Register
               </button>
             </div>
           </div>
+          <div class="message_container" id="message-Enginuity" style={{ display: "none" }}>
+          <p></p>
+          <img class="badge_preview" src="#"/>
+        </div>
         </form>
-
-        <div id="message-Enginuity" style={{ display: "none" }}></div>
       </div>
 
       <div id="Technofest" className="tabcontent">
-        <span
+        {/* <span
           id="closeTechnofest"
           className="topright"
         >
           &times;
-        </span>
+        </span> */}
         {/* <img alt='badge' src="https://btf.pythonanywhere.com/badge-going?n=Ahmed+Thahir&i=BITS+Pilani+Dubai+Campus" /> */}
         <form
           className="container m-4 pl-4"
           onSubmit={(event) => handleSubmit(event, "Technofest")}
         >
-          <h2>Technofest (for Schools) Registration Form</h2>
+          <h2>Technofest</h2>
+          {/* <p>May 1st, 2024</p> */}
           <div className="field">
-            <label className="label">Name</label>
+            {/* <label className="label">Name</label> */}
             <div className="control">
               <input
                 className="input"
                 type="text"
                 placeholder="Full Name"
-                name="Name"                
+                name="Name"
                 pattern="[A-Za-z\s]+"
                 title="Please enter only alphabets and spaces"
                 onInput={handleNameInput}
@@ -570,123 +319,29 @@ const BTFRegistration = () => {
             </div>
           </div>
           <div className="field">
-            {/*<label className="label">School Name</label>
             <div className="control">
-              <div className="select">
-                <select name="Institution">
-                  <option value="">Select an option</option>
-                  <option value="GEMS">GEMS</option>
-                  <option value="IHS">IHS</option>
-                  <option value="DPS">DPS</option>
-                </select>
-              </div>
-              </div> */}
-            <label className="label">School Name</label>
-             <input type="institute" id="institute-name" list="schools" />
-             <datalist id="schools">
-              <option value="DPS"></option>
-              <option value="IHS"></option>
-              <option value="GEMS"></option>
-            </datalist>
-          </div>
-          <div className="field">
-            <label className="label">Student-ID</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                placeholder="Student-ID"
-                name="Student-ID"
-              />
+              <input className="input" type="text" id="institute-name" list="schools" placeholder="School" name="Institute" required />
+              <datalist id="schools">
+                <option value="DPS"></option>
+                <option value="IHS"></option>
+                <option value="GEMS"></option>
+              </datalist>
             </div>
           </div>
           <div className="field">
-            <label className="label">Emirates-ID</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                placeholder="Enter valid Emirates ID"
-                name="Emirates-ID"
-                maxLength="18"
-                onKeyDown={(event) => {
-                  const input = event.target;
-                  const key = event.key;
-                  const value = input.value;
-                  const selectionStart = input.selectionStart;
-
-                  if (key === "Backspace") {
-                    if (value[selectionStart - 1] === "-") {
-                      event.preventDefault();
-                      input.value =
-                        value.slice(0, selectionStart - 1) +
-                        value.slice(selectionStart);
-                      input.setSelectionRange(
-                        selectionStart - 1,
-                        selectionStart - 1
-                      );
-                    }
-                  }
-                }}
-                onInput={(event) => {
-                  const input = event.target;
-                  let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
-                  const groups = [3, 4, 7, 4]; // Digit groups for formatting
-
-                  let formattedValue = "";
-                  let startIndex = 0;
-
-                  for (let i = 0; i < groups.length; i++) {
-                    if (value.length > startIndex) {
-                      if (i > 0) {
-                        formattedValue += "-";
-                      }
-                      formattedValue += value.substr(startIndex, groups[i]);
-                      startIndex += groups[i];
-                    } else {
-                      break;
-                    }
-                  }
-
-                  input.value = formattedValue;
-                }}
-                required
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Grade</label>
-            <div className="control">
-              <input
-                className="input"
-                type="number"
-                onInput={(event) => {
-                  if (event.target.value.length > event.target.maxLength) {
-                    event.target.value = event.target.value.slice(
-                      0,
-                      event.target.maxLength
-                    );
-                  }
-                }}
-                placeholder="Grade"
-                name="Grade"
-                maxLength="1"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Email</label>
+            {/* <label className="label">Email</label> */}
             <div className="control">
               <input
                 className="input"
                 type="email"
                 placeholder="Email"
                 name="Email"
+                required
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">Mobile Number</label>
+            {/* <label className="label">Mobile Number</label> */}
             <div className="control">
               <input
                 className="input"
@@ -699,197 +354,40 @@ const BTFRegistration = () => {
                     );
                   }
                 }}
-                placeholder="10 digit Number"
+                placeholder="Mobile Number (0501234567)"
                 name="Mobile Number"
                 maxLength="10"
+                required
               />
             </div>
           </div>
-          <div className="events-container">
-            <label className="label">Which event(s) would you like to register for? Hover over an event to learn more.</label>
+          {/* <div className="events-container">
+            <label className="label">Which event(s) would you like to register for?</label>
             <div className="control">
-            <label className="checkbox">
+              <label className="checkbox">
                 <input
                   type="checkbox"
                   name="Event 1"
                 />
-                 <EventCards 
-                   src='./images/variant2.png'
-                   eventName='event1'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='1'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 2"
-                />
-                <EventCards 
-                   src='images/event2.jpg'
-                   eventName='event2'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='2'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 3"
-                />
-                <EventCards 
-                   src='images/event3.jpg'
-                   eventName='event3'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='3'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 4"
-                />
-                <EventCards 
-                   src='images/event4.jpg'
-                   eventName='event4'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='4'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 5"
-                />
-                <EventCards 
-                   src='images/event5.jpg'
-                   eventName='event5'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='5'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 6"
-                />
-                <EventCards 
-                   src='images/event6.jpg'
-                   eventName='event6'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='6'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 7"
-                />
-                <EventCards 
-                   src='images/event7.jpg'
-                   eventName='event7'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='7'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 8"
-                />
-                <EventCards 
-                   src='images/event8.jpg'
-                   eventName='event8'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='8'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 9"
-                />
-                <EventCards 
-                   src='images/event1.jpg'
-                   eventName='event9'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='9'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 10"
-                />
-                <EventCards 
-                   src='images/event2.jpg'
-                   eventName='event10'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='10'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 11"
-                />
-                <EventCards 
-                   src='images/event3.jpg'
-                   eventName='event11'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='11'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 12"
-                />
-                <EventCards 
-                   src='images/event4.jpg'
-                   eventName='event12'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='12'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 13"
-                  value="False"
-                />
-                <EventCards 
-                   src='images/event5.jpg'
-                   eventName='event13'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='13'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 14"
-                />
-                <EventCards 
-                   src='images/event6.jpg'
-                   eventName='event14'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='14'/>
-              </label>
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="Event 15"
-                />
-                <EventCards 
-                   src='images/event7.jpg'
-                   eventName='event15'
-                   text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis accumsan aliquet. Nullam erat nulla, facilisis eu neque sed, lacinia pellentesque nisi. Etiam quis laoreet nisl, nec bibendum tortor.'
-                   label='15'/>
               </label>
             </div>
-          </div>
-          <div className="field is-grouped">
+          </div> */}
+          <div className="field is-grouped submit">
             <div className="control">
               <button
                 className="sign-up-button"
                 type="submit"
                 id="submit-button-Technofest"
               >
-                Sign Up
+                Register
               </button>
             </div>
           </div>
+          <div class="message_container" id="message-Technofest" style={{ display: "none" }}>
+          <p></p>
+          <img class="badge_preview" src="#"/>
+        </div>
         </form>
-
-        <div id="message-Technofest" style={{ display: "none" }}></div>
       </div>
 
     </div>
@@ -897,75 +395,3 @@ const BTFRegistration = () => {
 };
 
 export default BTFRegistration;
-
-// Modal logic for each event
-/*
-
-      {showTeamModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Team Registration</h2>
-              <p>Would you like to create a new team or join an existing team?</p>
-              <button className="button is-primary" onClick={() => openModal('createTeam')}>Create Team</button>
-              <button className="button is-primary" onClick={() => openModal('joinTeam')}>Join Team</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-
-      {showCreateTeamModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Create Team</h2>
-              <div className="field">
-                <label className="label" htmlFor="team-name">Team Name:</label>
-                <div className="control">
-                  <input className="input" type="text" id="team-name" name="team-name" required />
-                </div>
-              </div>
-              <button className="button is-primary" onClick={generateTeamCode}>Generate Code</button>
-              <p id="team-code"></p>
-              <button className="button is-primary" onClick={confirmCreateTeam}>Confirm</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-
-      {showJoinTeamModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Join Team</h2>
-              <div className="field">
-                <label className="label" htmlFor="join-code">Enter Team Code:</label>
-                <div className="control">
-                  <input className="input" type="text" id="join-code" name="join-code" required />
-                </div>
-              </div>
-              <button className="button is-primary" onClick={confirmJoinTeam}>Join Team</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-      {showIndividualModal && (
-        <div className="modal is-active">
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal-content">
-            <div className="box">
-              <h2>Individual Registration</h2>
-              <p>You have chosen to register as an individual for this event.</p>
-              <button className="button is-primary" onClick={confirmIndividual}>Confirm</button>
-            </div>
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={closeModal}></button>
-        </div>
-      )}
-      */
